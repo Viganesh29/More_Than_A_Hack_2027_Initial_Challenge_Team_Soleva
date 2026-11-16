@@ -2,7 +2,8 @@
 
 Rule-based possession engine over the provided automatic tracking (ATD). One label per video
 frame: `H`, `A`, `D`, or `X` outside the graded halves. The method, the possession rules, the external
-data and the limitations are described in [Soleva.md](Soleva.md).
+data and the limitations are described in the technical document,
+[Soleva.pdf](Soleva.pdf) (same content as [Soleva.md](Soleva.md)).
 
 ## Reproduce the submission
 
