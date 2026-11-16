@@ -29,7 +29,7 @@ The pipeline (`run_pipeline.py`) works as follows:
    the ball to the nearest home player and to the nearest away player, whether the ball is
    tracked, and whether it is outside the pitch.
 3. **State machine per half** (H / A / D). The rules are listed in Section 4.
-4. **Post-processing.** D gaps of up to 2 s between two runs of the same team are bridged, unless
+4. **Post-processing.** D gaps of up to 4 s between two runs of the same team are bridged, unless
    the ball was clearly out. Possessions shorter than 1.6 s are merged into the neighbouring
    possession.
 5. **Output.** Frames outside the two halves are written as `X`, which the scorer never grades.
@@ -75,7 +75,7 @@ parameter.**
 For each held-out game, we choose the parameter set with the best mean spellF1 on the other two
 games and report its score on the held-out game. The comparison point is the official baseline
 algorithm (nearest player, ±50-frame majority vote) run on the same games. Parameters were selected
-in three stages. Before each of stages 2 and 3, we decided to keep a change only if the held-out
+in four stages. Before each of stages 2, 3 and 4, we decided to keep a change only if the held-out
 mean improved and at least two of the three held-out games improved.
 
 1. **Core rules, clean tracking** (288 parameter sets: control radius 1.0–3.0 m, dwell 3–20
@@ -110,13 +110,23 @@ All three held-out games improved, so the stage-3 parameters were adopted. On th
 score 0.689 / 0.646 / 0.631 (mean 0.655, against 0.665 for the stage-2 parameters). The robustness
 gain on noisy tracking (+0.065) costs about 0.01 on clean tracking, which is within the noise band.
 
-**Final parameters** (best mean over the three degraded games): control radius 1.0 m, dwell
-3 frames, switch margin 0.25 m, ball interpolation over gaps of up to 100 frames (4 s), gaps
-longer than 175 frames (7 s) dead from their start, restart radius 2.5 m, D gaps of up to 50 frames
-(2 s) between the same team bridged, minimum possession 40 frames (1.6 s), stoppage-speed rule off.
-The core choices (radius, dwell, margin, long-gap rule, bridging, minimum possession) were the same
-in all three folds. The gap hold (4–7 s), the interpolation length and the restart radius varied
-between folds, so they are only weakly determined.
+4. **Refinement past the search edges** (`scripts/robust_cv.py --refine`). Four stage-3 values lay
+   on the edge of the searched range: dwell, minimum possession, bridging and switch margin. We
+   extended those four past the edge (144 combinations, other parameters fixed), using 4 noise
+   seeds per game instead of 2. With the same adoption rule, the held-out mean on degraded games
+   went from 0.582 to 0.584, with all three games slightly better. Clean games: 0.655 → 0.653.
+   Dwell (3 frames) and minimum possession (40 frames) were confirmed as optima. Only the switch
+   margin (0.25 → 0.1 m) and bridging (50 → 100 frames) changed. The gain is far below the noise
+   band; we adopted it only because of the rule fixed in advance. This approach has reached its
+   ceiling on the available external data.
+
+**Final parameters:** control radius 1.0 m, dwell 3 frames, switch margin 0.1 m, ball
+interpolation over gaps of up to 100 frames (4 s), gaps longer than 175 frames (7 s) dead from their
+start, restart radius 2.5 m, D gaps of up to 100 frames (4 s) between the same team bridged,
+minimum possession 40 frames (1.6 s), stoppage-speed rule off. The core choices (radius, dwell,
+long-gap rule, minimum possession) were the same in every fold of stages 3 and 4. The gap hold
+(4–7 s), the interpolation length and the restart radius varied between folds in stage 3, so they
+are only weakly determined.
 
 **These numbers are not comparable to the leaderboard.** The Metrica tracking is cleaner than the
 competition's uncorrected ATD, and our reference labels come from events, whereas the competition
@@ -153,7 +163,8 @@ algorithm on independent matches. They do not predict our leaderboard score.
   that team possession.
 
 Final parameters are in `params_tuned.json`. Every configuration's per-game scores are in
-`docs/external_cv_results.json` (stages 1–2) and `docs/robust_cv_results.json` (stage 3).
+`docs/external_cv_results.json` (stages 1–2), `docs/robust_cv_results.json` (stage 3) and
+`docs/robust_cv_refine_results.json` (stage 4).
 
 ## 5. Limitations and what we would do next
 
@@ -187,6 +198,7 @@ python scripts/download_external_data.py
 python scripts/external_cv.py --stage 1 --no-write   # stage 1
 python scripts/external_cv.py --no-write             # stage 2
 python scripts/robust_cv.py --write-params           # stage 3 (writes params_tuned.json)
+python scripts/robust_cv.py --refine --write-params  # stage 4 (writes params_tuned.json)
 ```
 
 The pipeline is deterministic: the same inputs always produce the same file.

@@ -20,10 +20,12 @@ the same degraded data.
 
     python scripts/robust_cv.py                 # ~15-25 min, writes docs/robust_cv_results.json
     python scripts/robust_cv.py --write-params  # also writes params_tuned.json if adopted
+    python scripts/robust_cv.py --refine --write-params   # refinement round (4 noise seeds)
 """
 
 import argparse
 import dataclasses
+import itertools
 import json
 import os
 import sys
@@ -58,6 +60,16 @@ SPACE = {
     "min_spell_frames": [15, 25, 40],
 }
 FIXED = {"enable_stoppage_speed": False}
+
+# Refinement round: the stage-3 parameters with the settings that landed on the edge of SPACE
+# extended past that edge. Scored with more noise seeds so the choice depends less on one draw.
+REFINE_SPACE = {
+    "dwell_frames": [1, 2, 3, 4],
+    "min_spell_frames": [40, 50, 60, 75],
+    "bridging_max_gap": [50, 75, 100],
+    "switch_margin_m": [0.0, 0.1, 0.25],
+}
+REFINE_NOISE_SEEDS = (11, 22, 33, 44)
 
 
 def _chunks_until(rng, mask_ok: np.ndarray, n_remove: int, mean_len: float, max_len: int):
@@ -127,6 +139,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--n", type=int, default=N_RANDOM)
     parser.add_argument("--write-params", action="store_true")
+    parser.add_argument("--refine", action="store_true",
+                        help="refinement round around the current params_tuned.json (4 noise seeds)")
     args = parser.parse_args()
 
     t0 = time.time()
@@ -135,7 +149,8 @@ def main() -> None:
     for g in games:
         td, gt = load_game(g)
         clean[g] = (td, gt)
-        degraded[g] = [(degrade(td, seed * 10 + g), gt) for seed in NOISE_SEEDS]
+        seeds = REFINE_NOISE_SEEDS if args.refine else NOISE_SEEDS
+        degraded[g] = [(degrade(td, seed * 10 + g), gt) for seed in seeds]
         vis = [float((~np.isnan(d.ball_position).any(1))[d.periods > 0].mean()) for d, _ in degraded[g]]
         print(f"game {g}: ball visible clean {clean[g][0].ball_visible_mask[td.periods > 0].mean():.3f}"
               f" -> degraded {np.round(vis, 3).tolist()}  ({time.time() - t0:.0f}s)")
@@ -159,7 +174,15 @@ def main() -> None:
     print("current params on degraded data:", current_entry["per_game"])
     print("baseline algorithm on degraded data:", base_deg)
 
-    configs = sample_configs(args.n, SEARCH_SEED)
+    if args.refine:
+        keys = list(REFINE_SPACE)
+        configs = []
+        for values in itertools.product(*(REFINE_SPACE[k] for k in keys)):
+            cfg = dict(current)
+            cfg.update(dict(zip(keys, values)))
+            configs.append(cfg)
+    else:
+        configs = sample_configs(args.n, SEARCH_SEED)
     table = []
     for i, cfg in enumerate(configs):
         table.append({"params": cfg, "per_game": eval_cfg(cfg)})
@@ -193,7 +216,8 @@ def main() -> None:
     summary = {
         "degradation": {"target_ball_visible": TARGET_BALL_VISIBLE, "ball_noise_m": 0.5,
                         "player_noise_m": 0.3, "player_dropout": 0.10, "noise_seeds": NOISE_SEEDS},
-        "search": {"n_random": args.n, "seed": SEARCH_SEED, "space": SPACE, "fixed": FIXED},
+        "search": ({"refine_space": REFINE_SPACE, "noise_seeds": REFINE_NOISE_SEEDS} if args.refine
+                   else {"n_random": args.n, "seed": SEARCH_SEED, "space": SPACE, "fixed": FIXED}),
         "logo_folds": folds,
         "logo_mean_held_out_new": round(new_mean, 4),
         "logo_mean_held_out_current": round(cur_mean, 4),
@@ -214,14 +238,15 @@ def main() -> None:
           " current:", {g: v["spellF1"] for g, v in cur_clean.items()})
 
     os.makedirs(os.path.join(ROOT, "docs"), exist_ok=True)
-    with open(os.path.join(ROOT, "docs", "robust_cv_results.json"), "w", encoding="utf-8") as fh:
+    out_name = "robust_cv_refine_results.json" if args.refine else "robust_cv_results.json"
+    with open(os.path.join(ROOT, "docs", out_name), "w", encoding="utf-8") as fh:
         json.dump({"summary": summary, "all_configs": table}, fh, indent=1)
 
     if args.write_params and adopt:
         full = dataclasses.asdict(PossessionConfig.from_dict(final["params"]))
         manifest = {
             "schema_version": "3.0.0",
-            "model_name": "rule_based_possession_v3",
+            "model_name": "rule_based_possession_v4" if args.refine else "rule_based_possession_v3",
             "notes": (
                 "Parameters selected by scripts/robust_cv.py on degraded versions of the public "
                 "Metrica sample games (leave-one-game-out, best mean spellF1). Nothing was fitted "

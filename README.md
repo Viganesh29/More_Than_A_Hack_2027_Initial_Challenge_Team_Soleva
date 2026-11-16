@@ -30,6 +30,7 @@ python scripts/external_cv.py --stage 1 --no-write   # stage 1: core rules, clea
 python scripts/external_cv.py --no-write              # stage 2: + ball-gap rules, clean games
 python scripts/robust_cv.py --write-params            # stage 3: degraded games -> params_tuned.json
                                                       # and docs/robust_cv_results.json (~17 min)
+python scripts/robust_cv.py --refine --write-params   # stage 4: refinement, 4 noise seeds (~13 min)
 ```
 
 ## Tests
@@ -47,7 +48,7 @@ python -m pytest tests          # no competition data needed; uses a fake ATD fi
 | `src/possession_model.py` | the possession rules |
 | `src/event_labels.py` | reference labels for the external Metrica games, built from their events |
 | `scripts/external_cv.py` | external evaluation, stages 1-2 (clean Metrica games) |
-| `scripts/robust_cv.py` | stage 3: selection on degraded Metrica games (final parameters) |
+| `scripts/robust_cv.py` | stages 3-4: selection on degraded Metrica games (final parameters) |
 | `games.py`, `evaluation/` | copied unchanged from the official challenge repository (MIT) |
 
 Data handling: `data/`, `ext_data/`, videos and generated submissions are gitignored. No match

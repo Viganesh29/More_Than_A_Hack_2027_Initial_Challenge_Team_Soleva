@@ -1,15 +1,15 @@
 {
   "schema_version": "3.0.0",
-  "model_name": "rule_based_possession_v3",
+  "model_name": "rule_based_possession_v4",
   "notes": "Parameters selected by scripts/robust_cv.py on degraded versions of the public Metrica sample games (leave-one-game-out, best mean spellF1). Nothing was fitted to the competition match, its video or its ground truth.",
   "external_cv": {
     "selection": "degraded Metrica games, leave-one-game-out",
-    "logo_mean_held_out_spellF1_degraded": 0.5816,
-    "previous_params_same_data": 0.5172,
+    "logo_mean_held_out_spellF1_degraded": 0.5843,
+    "previous_params_same_data": 0.5816,
     "clean_games_spellF1": {
-      "1": 0.6891,
-      "2": 0.6456,
-      "3": 0.6306
+      "1": 0.6905,
+      "2": 0.6416,
+      "3": 0.626
     }
   },
   "parameters": {
@@ -17,7 +17,7 @@
     "pitch_margin": 1.0,
     "enable_hysteresis": true,
     "dwell_frames": 3,
-    "switch_margin_m": 0.25,
+    "switch_margin_m": 0.1,
     "hold_on_missing_ball": true,
     "hold_on_loose_ball": true,
     "max_missing_hold_frames": 175,
@@ -35,7 +35,7 @@
     "enable_restart_attribution": true,
     "restart_search_window": 2.5,
     "enable_stoppage_bridging": true,
-    "bridging_max_gap": 50,
+    "bridging_max_gap": 100,
     "enable_spell_pruning": true,
     "min_spell_frames": 40,
     "smoothing_window": 0

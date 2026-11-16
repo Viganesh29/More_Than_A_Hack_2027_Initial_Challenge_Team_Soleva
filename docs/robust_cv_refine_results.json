@@ -1,0 +1,6623 @@
+{
+ "summary": {
+  "degradation": {
+   "target_ball_visible": 0.59,
+   "ball_noise_m": 0.5,
+   "player_noise_m": 0.3,
+   "player_dropout": 0.1,
+   "noise_seeds": [
+    11,
+    22
+   ]
+  },
+  "search": {
+   "refine_space": {
+    "dwell_frames": [
+     1,
+     2,
+     3,
+     4
+    ],
+    "min_spell_frames": [
+     40,
+     50,
+     60,
+     75
+    ],
+    "bridging_max_gap": [
+     50,
+     75,
+     100
+    ],
+    "switch_margin_m": [
+     0.0,
+     0.1,
+     0.25
+    ]
+   },
+   "noise_seeds": [
+    11,
+    22,
+    33,
+    44
+   ]
+  },
+  "logo_folds": [
+   {
+    "held_out_game": 1,
+    "selected_params": {
+     "distance_threshold": 1.0,
+     "pitch_margin": 1.0,
+     "enable_hysteresis": true,
+     "dwell_frames": 3,
+     "switch_margin_m": 0.1,
+     "hold_on_missing_ball": true,
+     "hold_on_loose_ball": true,
+     "max_missing_hold_frames": 175,
+     "prolonged_loose_dead_frames": 125,
+     "ball_interp_max_gap": 100,
+     "dead_long_gaps_from_start": true,
+     "enable_dead_ball": true,
+     "enable_stoppage_speed": false,
+     "stoppage_speed_mps": 1.0,
+     "stoppage_ball_speed_mps": 2.0,
+     "stoppage_min_frames": 50,
+     "speed_smoothing_frames": 25,
+     "max_player_speed_mps": 12.0,
+     "min_tracked_players": 6,
+     "enable_restart_attribution": true,
+     "restart_search_window": 2.5,
+     "enable_stoppage_bridging": true,
+     "bridging_max_gap": 100,
+     "enable_spell_pruning": true,
+     "min_spell_frames": 40,
+     "smoothing_window": 0
+    },
+    "held_out_spellF1": 0.6052,
+    "current_params_spellF1": 0.6021,
+    "baseline_spellF1": 0.3252
+   },
+   {
+    "held_out_game": 2,
+    "selected_params": {
+     "distance_threshold": 1.0,
+     "pitch_margin": 1.0,
+     "enable_hysteresis": true,
+     "dwell_frames": 3,
+     "switch_margin_m": 0.1,
+     "hold_on_missing_ball": true,
+     "hold_on_loose_ball": true,
+     "max_missing_hold_frames": 175,
+     "prolonged_loose_dead_frames": 125,
+     "ball_interp_max_gap": 100,
+     "dead_long_gaps_from_start": true,
+     "enable_dead_ball": true,
+     "enable_stoppage_speed": false,
+     "stoppage_speed_mps": 1.0,
+     "stoppage_ball_speed_mps": 2.0,
+     "stoppage_min_frames": 50,
+     "speed_smoothing_frames": 25,
+     "max_player_speed_mps": 12.0,
+     "min_tracked_players": 6,
+     "enable_restart_attribution": true,
+     "restart_search_window": 2.5,
+     "enable_stoppage_bridging": true,
+     "bridging_max_gap": 100,
+     "enable_spell_pruning": true,
+     "min_spell_frames": 40,
+     "smoothing_window": 0
+    },
+    "held_out_spellF1": 0.5938,
+    "current_params_spellF1": 0.5911,
+    "baseline_spellF1": 0.3067
+   },
+   {
+    "held_out_game": 3,
+    "selected_params": {
+     "distance_threshold": 1.0,
+     "pitch_margin": 1.0,
+     "enable_hysteresis": true,
+     "dwell_frames": 3,
+     "switch_margin_m": 0.1,
+     "hold_on_missing_ball": true,
+     "hold_on_loose_ball": true,
+     "max_missing_hold_frames": 175,
+     "prolonged_loose_dead_frames": 125,
+     "ball_interp_max_gap": 100,
+     "dead_long_gaps_from_start": true,
+     "enable_dead_ball": true,
+     "enable_stoppage_speed": false,
+     "stoppage_speed_mps": 1.0,
+     "stoppage_ball_speed_mps": 2.0,
+     "stoppage_min_frames": 50,
+     "speed_smoothing_frames": 25,
+     "max_player_speed_mps": 12.0,
+     "min_tracked_players": 6,
+     "enable_restart_attribution": true,
+     "restart_search_window": 2.5,
+     "enable_stoppage_bridging": true,
+     "bridging_max_gap": 75,
+     "enable_spell_pruning": true,
+     "min_spell_frames": 40,
+     "smoothing_window": 0
+    },
+    "held_out_spellF1": 0.554,
+    "current_params_spellF1": 0.5515,
+    "baseline_spellF1": 0.259
+   }
+  ],
+  "logo_mean_held_out_new": 0.5843,
+  "logo_mean_held_out_current": 0.5816,
+  "held_out_games_improved": 3,
+  "adopt": true,
+  "final_params": {
+   "distance_threshold": 1.0,
+   "pitch_margin": 1.0,
+   "enable_hysteresis": true,
+   "dwell_frames": 3,
+   "switch_margin_m": 0.1,
+   "hold_on_missing_ball": true,
+   "hold_on_loose_ball": true,
+   "max_missing_hold_frames": 175,
+   "prolonged_loose_dead_frames": 125,
+   "ball_interp_max_gap": 100,
+   "dead_long_gaps_from_start": true,
+   "enable_dead_ball": true,
+   "enable_stoppage_speed": false,
+   "stoppage_speed_mps": 1.0,
+   "stoppage_ball_speed_mps": 2.0,
+   "stoppage_min_frames": 50,
+   "speed_smoothing_frames": 25,
+   "max_player_speed_mps": 12.0,
+   "min_tracked_players": 6,
+   "enable_restart_attribution": true,
+   "restart_search_window": 2.5,
+   "enable_stoppage_bridging": true,
+   "bridging_max_gap": 100,
+   "enable_spell_pruning": true,
+   "min_spell_frames": 40,
+   "smoothing_window": 0
+  },
+  "final_degraded_per_game": {
+   "1": {
+    "spellF1": 0.6052,
+    "macroF1": 0.9
+   },
+   "2": {
+    "spellF1": 0.5938,
+    "macroF1": 0.9195
+   },
+   "3": {
+    "spellF1": 0.5558,
+    "macroF1": 0.894
+   }
+  },
+  "final_clean_per_game": {
+   "1": {
+    "spellF1": 0.6905,
+    "macroF1": 0.9241,
+    "n_pred_spells": 300,
+    "n_gt_spells": 383
+   },
+   "2": {
+    "spellF1": 0.6416,
+    "macroF1": 0.9309,
+    "n_pred_spells": 275,
+    "n_gt_spells": 359
+   },
+   "3": {
+    "spellF1": 0.626,
+    "macroF1": 0.9228,
+    "n_pred_spells": 339,
+    "n_gt_spells": 408
+   }
+  },
+  "current_clean_per_game": {
+   "1": {
+    "spellF1": 0.6891,
+    "macroF1": 0.9244,
+    "n_pred_spells": 299,
+    "n_gt_spells": 383
+   },
+   "2": {
+    "spellF1": 0.6456,
+    "macroF1": 0.9322,
+    "n_pred_spells": 273,
+    "n_gt_spells": 359
+   },
+   "3": {
+    "spellF1": 0.6306,
+    "macroF1": 0.9238,
+    "n_pred_spells": 331,
+    "n_gt_spells": 408
+   }
+  },
+  "baseline_degraded_per_game": {
+   "1": 0.3252,
+   "2": 0.3067,
+   "3": 0.259
+  }
+ },
+ "all_configs": [
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5317,
+     "macroF1": 0.8769
+    },
+    "2": {
+     "spellF1": 0.5321,
+     "macroF1": 0.8968
+    },
+    "3": {
+     "spellF1": 0.4714,
+     "macroF1": 0.8647
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5348,
+     "macroF1": 0.8776
+    },
+    "2": {
+     "spellF1": 0.5346,
+     "macroF1": 0.8976
+    },
+    "3": {
+     "spellF1": 0.4739,
+     "macroF1": 0.8654
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.539,
+     "macroF1": 0.8783
+    },
+    "2": {
+     "spellF1": 0.5362,
+     "macroF1": 0.8985
+    },
+    "3": {
+     "spellF1": 0.4763,
+     "macroF1": 0.8663
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5317,
+     "macroF1": 0.8769
+    },
+    "2": {
+     "spellF1": 0.5328,
+     "macroF1": 0.897
+    },
+    "3": {
+     "spellF1": 0.4725,
+     "macroF1": 0.8654
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5348,
+     "macroF1": 0.8776
+    },
+    "2": {
+     "spellF1": 0.5353,
+     "macroF1": 0.8977
+    },
+    "3": {
+     "spellF1": 0.475,
+     "macroF1": 0.866
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.539,
+     "macroF1": 0.8783
+    },
+    "2": {
+     "spellF1": 0.5368,
+     "macroF1": 0.8986
+    },
+    "3": {
+     "spellF1": 0.4773,
+     "macroF1": 0.867
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5317,
+     "macroF1": 0.8769
+    },
+    "2": {
+     "spellF1": 0.5328,
+     "macroF1": 0.897
+    },
+    "3": {
+     "spellF1": 0.474,
+     "macroF1": 0.8661
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5348,
+     "macroF1": 0.8776
+    },
+    "2": {
+     "spellF1": 0.5353,
+     "macroF1": 0.8977
+    },
+    "3": {
+     "spellF1": 0.4766,
+     "macroF1": 0.8667
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.539,
+     "macroF1": 0.8783
+    },
+    "2": {
+     "spellF1": 0.5368,
+     "macroF1": 0.8986
+    },
+    "3": {
+     "spellF1": 0.4789,
+     "macroF1": 0.8677
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5165,
+     "macroF1": 0.8744
+    },
+    "2": {
+     "spellF1": 0.5212,
+     "macroF1": 0.8973
+    },
+    "3": {
+     "spellF1": 0.4526,
+     "macroF1": 0.8602
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5204,
+     "macroF1": 0.8752
+    },
+    "2": {
+     "spellF1": 0.5269,
+     "macroF1": 0.8982
+    },
+    "3": {
+     "spellF1": 0.4555,
+     "macroF1": 0.8607
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5214,
+     "macroF1": 0.8763
+    },
+    "2": {
+     "spellF1": 0.5268,
+     "macroF1": 0.8985
+    },
+    "3": {
+     "spellF1": 0.4584,
+     "macroF1": 0.8621
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5165,
+     "macroF1": 0.8744
+    },
+    "2": {
+     "spellF1": 0.5219,
+     "macroF1": 0.8974
+    },
+    "3": {
+     "spellF1": 0.4537,
+     "macroF1": 0.8609
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5204,
+     "macroF1": 0.8752
+    },
+    "2": {
+     "spellF1": 0.5276,
+     "macroF1": 0.8983
+    },
+    "3": {
+     "spellF1": 0.4565,
+     "macroF1": 0.8614
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5214,
+     "macroF1": 0.8763
+    },
+    "2": {
+     "spellF1": 0.5275,
+     "macroF1": 0.8986
+    },
+    "3": {
+     "spellF1": 0.4595,
+     "macroF1": 0.8628
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5165,
+     "macroF1": 0.8744
+    },
+    "2": {
+     "spellF1": 0.5219,
+     "macroF1": 0.8974
+    },
+    "3": {
+     "spellF1": 0.4552,
+     "macroF1": 0.8617
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5204,
+     "macroF1": 0.8752
+    },
+    "2": {
+     "spellF1": 0.5276,
+     "macroF1": 0.8983
+    },
+    "3": {
+     "spellF1": 0.4581,
+     "macroF1": 0.8622
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5214,
+     "macroF1": 0.8763
+    },
+    "2": {
+     "spellF1": 0.5275,
+     "macroF1": 0.8986
+    },
+    "3": {
+     "spellF1": 0.461,
+     "macroF1": 0.8636
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4991,
+     "macroF1": 0.8689
+    },
+    "2": {
+     "spellF1": 0.5018,
+     "macroF1": 0.8937
+    },
+    "3": {
+     "spellF1": 0.4354,
+     "macroF1": 0.8553
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5002,
+     "macroF1": 0.8695
+    },
+    "2": {
+     "spellF1": 0.5036,
+     "macroF1": 0.8942
+    },
+    "3": {
+     "spellF1": 0.4372,
+     "macroF1": 0.856
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5029,
+     "macroF1": 0.8706
+    },
+    "2": {
+     "spellF1": 0.5073,
+     "macroF1": 0.8952
+    },
+    "3": {
+     "spellF1": 0.4415,
+     "macroF1": 0.8571
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4991,
+     "macroF1": 0.8689
+    },
+    "2": {
+     "spellF1": 0.5022,
+     "macroF1": 0.8939
+    },
+    "3": {
+     "spellF1": 0.4369,
+     "macroF1": 0.856
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5002,
+     "macroF1": 0.8695
+    },
+    "2": {
+     "spellF1": 0.504,
+     "macroF1": 0.8944
+    },
+    "3": {
+     "spellF1": 0.4387,
+     "macroF1": 0.8568
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5029,
+     "macroF1": 0.8706
+    },
+    "2": {
+     "spellF1": 0.5077,
+     "macroF1": 0.8953
+    },
+    "3": {
+     "spellF1": 0.4429,
+     "macroF1": 0.8578
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4991,
+     "macroF1": 0.8689
+    },
+    "2": {
+     "spellF1": 0.5022,
+     "macroF1": 0.8939
+    },
+    "3": {
+     "spellF1": 0.4385,
+     "macroF1": 0.8569
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5002,
+     "macroF1": 0.8695
+    },
+    "2": {
+     "spellF1": 0.504,
+     "macroF1": 0.8944
+    },
+    "3": {
+     "spellF1": 0.4403,
+     "macroF1": 0.8577
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5029,
+     "macroF1": 0.8706
+    },
+    "2": {
+     "spellF1": 0.5077,
+     "macroF1": 0.8953
+    },
+    "3": {
+     "spellF1": 0.4445,
+     "macroF1": 0.8587
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4511,
+     "macroF1": 0.8587
+    },
+    "2": {
+     "spellF1": 0.4832,
+     "macroF1": 0.8878
+    },
+    "3": {
+     "spellF1": 0.4104,
+     "macroF1": 0.8526
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4551,
+     "macroF1": 0.8592
+    },
+    "2": {
+     "spellF1": 0.486,
+     "macroF1": 0.8884
+    },
+    "3": {
+     "spellF1": 0.413,
+     "macroF1": 0.8536
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.457,
+     "macroF1": 0.8599
+    },
+    "2": {
+     "spellF1": 0.4895,
+     "macroF1": 0.8907
+    },
+    "3": {
+     "spellF1": 0.4164,
+     "macroF1": 0.8546
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4511,
+     "macroF1": 0.8587
+    },
+    "2": {
+     "spellF1": 0.4836,
+     "macroF1": 0.888
+    },
+    "3": {
+     "spellF1": 0.4118,
+     "macroF1": 0.8533
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4551,
+     "macroF1": 0.8592
+    },
+    "2": {
+     "spellF1": 0.4864,
+     "macroF1": 0.8886
+    },
+    "3": {
+     "spellF1": 0.4145,
+     "macroF1": 0.8542
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.457,
+     "macroF1": 0.8599
+    },
+    "2": {
+     "spellF1": 0.4899,
+     "macroF1": 0.8908
+    },
+    "3": {
+     "spellF1": 0.4179,
+     "macroF1": 0.8553
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4511,
+     "macroF1": 0.8587
+    },
+    "2": {
+     "spellF1": 0.4836,
+     "macroF1": 0.888
+    },
+    "3": {
+     "spellF1": 0.4133,
+     "macroF1": 0.8542
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4551,
+     "macroF1": 0.8592
+    },
+    "2": {
+     "spellF1": 0.4864,
+     "macroF1": 0.8886
+    },
+    "3": {
+     "spellF1": 0.4159,
+     "macroF1": 0.8551
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 1,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.457,
+     "macroF1": 0.8599
+    },
+    "2": {
+     "spellF1": 0.4899,
+     "macroF1": 0.8908
+    },
+    "3": {
+     "spellF1": 0.4194,
+     "macroF1": 0.8562
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5911,
+     "macroF1": 0.8953
+    },
+    "2": {
+     "spellF1": 0.5878,
+     "macroF1": 0.9155
+    },
+    "3": {
+     "spellF1": 0.541,
+     "macroF1": 0.8859
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5987,
+     "macroF1": 0.8963
+    },
+    "2": {
+     "spellF1": 0.5898,
+     "macroF1": 0.9169
+    },
+    "3": {
+     "spellF1": 0.5425,
+     "macroF1": 0.887
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6019,
+     "macroF1": 0.8979
+    },
+    "2": {
+     "spellF1": 0.5938,
+     "macroF1": 0.9183
+    },
+    "3": {
+     "spellF1": 0.547,
+     "macroF1": 0.8891
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5911,
+     "macroF1": 0.8953
+    },
+    "2": {
+     "spellF1": 0.5881,
+     "macroF1": 0.9157
+    },
+    "3": {
+     "spellF1": 0.5419,
+     "macroF1": 0.8865
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5987,
+     "macroF1": 0.8963
+    },
+    "2": {
+     "spellF1": 0.5901,
+     "macroF1": 0.917
+    },
+    "3": {
+     "spellF1": 0.5434,
+     "macroF1": 0.8877
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6019,
+     "macroF1": 0.8979
+    },
+    "2": {
+     "spellF1": 0.5942,
+     "macroF1": 0.9184
+    },
+    "3": {
+     "spellF1": 0.5478,
+     "macroF1": 0.8897
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5911,
+     "macroF1": 0.8953
+    },
+    "2": {
+     "spellF1": 0.5881,
+     "macroF1": 0.9157
+    },
+    "3": {
+     "spellF1": 0.5436,
+     "macroF1": 0.8872
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5987,
+     "macroF1": 0.8963
+    },
+    "2": {
+     "spellF1": 0.5901,
+     "macroF1": 0.917
+    },
+    "3": {
+     "spellF1": 0.5451,
+     "macroF1": 0.8883
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6019,
+     "macroF1": 0.8979
+    },
+    "2": {
+     "spellF1": 0.5942,
+     "macroF1": 0.9184
+    },
+    "3": {
+     "spellF1": 0.5496,
+     "macroF1": 0.8904
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5643,
+     "macroF1": 0.8916
+    },
+    "2": {
+     "spellF1": 0.5827,
+     "macroF1": 0.9144
+    },
+    "3": {
+     "spellF1": 0.5097,
+     "macroF1": 0.8794
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5688,
+     "macroF1": 0.8921
+    },
+    "2": {
+     "spellF1": 0.5845,
+     "macroF1": 0.916
+    },
+    "3": {
+     "spellF1": 0.5095,
+     "macroF1": 0.8807
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5732,
+     "macroF1": 0.8939
+    },
+    "2": {
+     "spellF1": 0.5891,
+     "macroF1": 0.9171
+    },
+    "3": {
+     "spellF1": 0.5181,
+     "macroF1": 0.8837
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5643,
+     "macroF1": 0.8916
+    },
+    "2": {
+     "spellF1": 0.5831,
+     "macroF1": 0.9145
+    },
+    "3": {
+     "spellF1": 0.5106,
+     "macroF1": 0.88
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5688,
+     "macroF1": 0.8921
+    },
+    "2": {
+     "spellF1": 0.5849,
+     "macroF1": 0.9161
+    },
+    "3": {
+     "spellF1": 0.5103,
+     "macroF1": 0.8814
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5732,
+     "macroF1": 0.8939
+    },
+    "2": {
+     "spellF1": 0.5895,
+     "macroF1": 0.9172
+    },
+    "3": {
+     "spellF1": 0.519,
+     "macroF1": 0.8843
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5643,
+     "macroF1": 0.8916
+    },
+    "2": {
+     "spellF1": 0.5831,
+     "macroF1": 0.9145
+    },
+    "3": {
+     "spellF1": 0.5123,
+     "macroF1": 0.8807
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5688,
+     "macroF1": 0.8921
+    },
+    "2": {
+     "spellF1": 0.5849,
+     "macroF1": 0.9161
+    },
+    "3": {
+     "spellF1": 0.5122,
+     "macroF1": 0.8821
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5732,
+     "macroF1": 0.8939
+    },
+    "2": {
+     "spellF1": 0.5895,
+     "macroF1": 0.9172
+    },
+    "3": {
+     "spellF1": 0.5208,
+     "macroF1": 0.885
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5595,
+     "macroF1": 0.8896
+    },
+    "2": {
+     "spellF1": 0.5679,
+     "macroF1": 0.9128
+    },
+    "3": {
+     "spellF1": 0.497,
+     "macroF1": 0.8756
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5631,
+     "macroF1": 0.8903
+    },
+    "2": {
+     "spellF1": 0.5718,
+     "macroF1": 0.9145
+    },
+    "3": {
+     "spellF1": 0.4961,
+     "macroF1": 0.8769
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5637,
+     "macroF1": 0.8914
+    },
+    "2": {
+     "spellF1": 0.5781,
+     "macroF1": 0.9161
+    },
+    "3": {
+     "spellF1": 0.5067,
+     "macroF1": 0.8803
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5595,
+     "macroF1": 0.8896
+    },
+    "2": {
+     "spellF1": 0.5683,
+     "macroF1": 0.9129
+    },
+    "3": {
+     "spellF1": 0.4979,
+     "macroF1": 0.8762
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5631,
+     "macroF1": 0.8903
+    },
+    "2": {
+     "spellF1": 0.5723,
+     "macroF1": 0.9147
+    },
+    "3": {
+     "spellF1": 0.4969,
+     "macroF1": 0.8776
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5637,
+     "macroF1": 0.8914
+    },
+    "2": {
+     "spellF1": 0.5785,
+     "macroF1": 0.9162
+    },
+    "3": {
+     "spellF1": 0.5076,
+     "macroF1": 0.8809
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5595,
+     "macroF1": 0.8896
+    },
+    "2": {
+     "spellF1": 0.5683,
+     "macroF1": 0.9129
+    },
+    "3": {
+     "spellF1": 0.4997,
+     "macroF1": 0.877
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5631,
+     "macroF1": 0.8903
+    },
+    "2": {
+     "spellF1": 0.5723,
+     "macroF1": 0.9147
+    },
+    "3": {
+     "spellF1": 0.4988,
+     "macroF1": 0.8783
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5637,
+     "macroF1": 0.8914
+    },
+    "2": {
+     "spellF1": 0.5785,
+     "macroF1": 0.9162
+    },
+    "3": {
+     "spellF1": 0.5094,
+     "macroF1": 0.8817
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5049,
+     "macroF1": 0.8818
+    },
+    "2": {
+     "spellF1": 0.5485,
+     "macroF1": 0.9103
+    },
+    "3": {
+     "spellF1": 0.4756,
+     "macroF1": 0.8724
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.512,
+     "macroF1": 0.8833
+    },
+    "2": {
+     "spellF1": 0.5513,
+     "macroF1": 0.9121
+    },
+    "3": {
+     "spellF1": 0.4764,
+     "macroF1": 0.8738
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5112,
+     "macroF1": 0.885
+    },
+    "2": {
+     "spellF1": 0.5582,
+     "macroF1": 0.9144
+    },
+    "3": {
+     "spellF1": 0.4836,
+     "macroF1": 0.8774
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5049,
+     "macroF1": 0.8818
+    },
+    "2": {
+     "spellF1": 0.549,
+     "macroF1": 0.9104
+    },
+    "3": {
+     "spellF1": 0.4764,
+     "macroF1": 0.8731
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.512,
+     "macroF1": 0.8833
+    },
+    "2": {
+     "spellF1": 0.5517,
+     "macroF1": 0.9122
+    },
+    "3": {
+     "spellF1": 0.4772,
+     "macroF1": 0.8744
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5112,
+     "macroF1": 0.885
+    },
+    "2": {
+     "spellF1": 0.5586,
+     "macroF1": 0.9145
+    },
+    "3": {
+     "spellF1": 0.4844,
+     "macroF1": 0.8781
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5049,
+     "macroF1": 0.8818
+    },
+    "2": {
+     "spellF1": 0.549,
+     "macroF1": 0.9104
+    },
+    "3": {
+     "spellF1": 0.4781,
+     "macroF1": 0.874
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.512,
+     "macroF1": 0.8833
+    },
+    "2": {
+     "spellF1": 0.5517,
+     "macroF1": 0.9122
+    },
+    "3": {
+     "spellF1": 0.4789,
+     "macroF1": 0.8753
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 2,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5112,
+     "macroF1": 0.885
+    },
+    "2": {
+     "spellF1": 0.5586,
+     "macroF1": 0.9145
+    },
+    "3": {
+     "spellF1": 0.4862,
+     "macroF1": 0.879
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5987,
+     "macroF1": 0.8984
+    },
+    "2": {
+     "spellF1": 0.5935,
+     "macroF1": 0.919
+    },
+    "3": {
+     "spellF1": 0.5502,
+     "macroF1": 0.892
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6052,
+     "macroF1": 0.9
+    },
+    "2": {
+     "spellF1": 0.5934,
+     "macroF1": 0.9193
+    },
+    "3": {
+     "spellF1": 0.5533,
+     "macroF1": 0.8926
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6021,
+     "macroF1": 0.8999
+    },
+    "2": {
+     "spellF1": 0.5911,
+     "macroF1": 0.9206
+    },
+    "3": {
+     "spellF1": 0.5515,
+     "macroF1": 0.8933
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5987,
+     "macroF1": 0.8984
+    },
+    "2": {
+     "spellF1": 0.5939,
+     "macroF1": 0.9192
+    },
+    "3": {
+     "spellF1": 0.551,
+     "macroF1": 0.8927
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6052,
+     "macroF1": 0.9
+    },
+    "2": {
+     "spellF1": 0.5938,
+     "macroF1": 0.9195
+    },
+    "3": {
+     "spellF1": 0.554,
+     "macroF1": 0.8932
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6021,
+     "macroF1": 0.8999
+    },
+    "2": {
+     "spellF1": 0.5915,
+     "macroF1": 0.9207
+    },
+    "3": {
+     "spellF1": 0.5523,
+     "macroF1": 0.894
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5987,
+     "macroF1": 0.8984
+    },
+    "2": {
+     "spellF1": 0.5939,
+     "macroF1": 0.9192
+    },
+    "3": {
+     "spellF1": 0.5528,
+     "macroF1": 0.8933
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6052,
+     "macroF1": 0.9
+    },
+    "2": {
+     "spellF1": 0.5938,
+     "macroF1": 0.9195
+    },
+    "3": {
+     "spellF1": 0.5558,
+     "macroF1": 0.894
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6021,
+     "macroF1": 0.8999
+    },
+    "2": {
+     "spellF1": 0.5915,
+     "macroF1": 0.9207
+    },
+    "3": {
+     "spellF1": 0.554,
+     "macroF1": 0.8946
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5814,
+     "macroF1": 0.8954
+    },
+    "2": {
+     "spellF1": 0.5846,
+     "macroF1": 0.9181
+    },
+    "3": {
+     "spellF1": 0.5293,
+     "macroF1": 0.8883
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5873,
+     "macroF1": 0.8972
+    },
+    "2": {
+     "spellF1": 0.5849,
+     "macroF1": 0.9183
+    },
+    "3": {
+     "spellF1": 0.5324,
+     "macroF1": 0.8891
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5877,
+     "macroF1": 0.8975
+    },
+    "2": {
+     "spellF1": 0.5813,
+     "macroF1": 0.9198
+    },
+    "3": {
+     "spellF1": 0.5351,
+     "macroF1": 0.8907
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5814,
+     "macroF1": 0.8954
+    },
+    "2": {
+     "spellF1": 0.585,
+     "macroF1": 0.9182
+    },
+    "3": {
+     "spellF1": 0.53,
+     "macroF1": 0.889
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5873,
+     "macroF1": 0.8972
+    },
+    "2": {
+     "spellF1": 0.5853,
+     "macroF1": 0.9184
+    },
+    "3": {
+     "spellF1": 0.5332,
+     "macroF1": 0.8897
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5877,
+     "macroF1": 0.8975
+    },
+    "2": {
+     "spellF1": 0.5817,
+     "macroF1": 0.9199
+    },
+    "3": {
+     "spellF1": 0.5358,
+     "macroF1": 0.8913
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5814,
+     "macroF1": 0.8954
+    },
+    "2": {
+     "spellF1": 0.585,
+     "macroF1": 0.9182
+    },
+    "3": {
+     "spellF1": 0.532,
+     "macroF1": 0.8897
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5873,
+     "macroF1": 0.8972
+    },
+    "2": {
+     "spellF1": 0.5853,
+     "macroF1": 0.9184
+    },
+    "3": {
+     "spellF1": 0.535,
+     "macroF1": 0.8904
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5877,
+     "macroF1": 0.8975
+    },
+    "2": {
+     "spellF1": 0.5817,
+     "macroF1": 0.9199
+    },
+    "3": {
+     "spellF1": 0.5375,
+     "macroF1": 0.892
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.567,
+     "macroF1": 0.8929
+    },
+    "2": {
+     "spellF1": 0.5756,
+     "macroF1": 0.9171
+    },
+    "3": {
+     "spellF1": 0.5129,
+     "macroF1": 0.8851
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5733,
+     "macroF1": 0.8948
+    },
+    "2": {
+     "spellF1": 0.577,
+     "macroF1": 0.9177
+    },
+    "3": {
+     "spellF1": 0.5161,
+     "macroF1": 0.8864
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.572,
+     "macroF1": 0.8949
+    },
+    "2": {
+     "spellF1": 0.5738,
+     "macroF1": 0.9192
+    },
+    "3": {
+     "spellF1": 0.5219,
+     "macroF1": 0.8883
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.567,
+     "macroF1": 0.8929
+    },
+    "2": {
+     "spellF1": 0.576,
+     "macroF1": 0.9172
+    },
+    "3": {
+     "spellF1": 0.5137,
+     "macroF1": 0.8858
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5733,
+     "macroF1": 0.8948
+    },
+    "2": {
+     "spellF1": 0.5774,
+     "macroF1": 0.9178
+    },
+    "3": {
+     "spellF1": 0.5168,
+     "macroF1": 0.887
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.572,
+     "macroF1": 0.8949
+    },
+    "2": {
+     "spellF1": 0.5742,
+     "macroF1": 0.9193
+    },
+    "3": {
+     "spellF1": 0.5226,
+     "macroF1": 0.889
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.567,
+     "macroF1": 0.8929
+    },
+    "2": {
+     "spellF1": 0.576,
+     "macroF1": 0.9172
+    },
+    "3": {
+     "spellF1": 0.5156,
+     "macroF1": 0.8864
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5733,
+     "macroF1": 0.8948
+    },
+    "2": {
+     "spellF1": 0.5774,
+     "macroF1": 0.9178
+    },
+    "3": {
+     "spellF1": 0.5188,
+     "macroF1": 0.8877
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.572,
+     "macroF1": 0.8949
+    },
+    "2": {
+     "spellF1": 0.5742,
+     "macroF1": 0.9193
+    },
+    "3": {
+     "spellF1": 0.5245,
+     "macroF1": 0.8896
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5183,
+     "macroF1": 0.8879
+    },
+    "2": {
+     "spellF1": 0.5597,
+     "macroF1": 0.9152
+    },
+    "3": {
+     "spellF1": 0.5021,
+     "macroF1": 0.883
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5242,
+     "macroF1": 0.8898
+    },
+    "2": {
+     "spellF1": 0.5608,
+     "macroF1": 0.9164
+    },
+    "3": {
+     "spellF1": 0.5024,
+     "macroF1": 0.8835
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5221,
+     "macroF1": 0.89
+    },
+    "2": {
+     "spellF1": 0.5573,
+     "macroF1": 0.9173
+    },
+    "3": {
+     "spellF1": 0.5058,
+     "macroF1": 0.8852
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5183,
+     "macroF1": 0.8879
+    },
+    "2": {
+     "spellF1": 0.5601,
+     "macroF1": 0.9153
+    },
+    "3": {
+     "spellF1": 0.5029,
+     "macroF1": 0.8836
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5242,
+     "macroF1": 0.8898
+    },
+    "2": {
+     "spellF1": 0.5613,
+     "macroF1": 0.9165
+    },
+    "3": {
+     "spellF1": 0.5031,
+     "macroF1": 0.8842
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5221,
+     "macroF1": 0.89
+    },
+    "2": {
+     "spellF1": 0.5577,
+     "macroF1": 0.9174
+    },
+    "3": {
+     "spellF1": 0.5065,
+     "macroF1": 0.8858
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5183,
+     "macroF1": 0.8879
+    },
+    "2": {
+     "spellF1": 0.5601,
+     "macroF1": 0.9153
+    },
+    "3": {
+     "spellF1": 0.5049,
+     "macroF1": 0.8844
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5242,
+     "macroF1": 0.8898
+    },
+    "2": {
+     "spellF1": 0.5613,
+     "macroF1": 0.9165
+    },
+    "3": {
+     "spellF1": 0.5051,
+     "macroF1": 0.885
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5221,
+     "macroF1": 0.89
+    },
+    "2": {
+     "spellF1": 0.5577,
+     "macroF1": 0.9174
+    },
+    "3": {
+     "spellF1": 0.5083,
+     "macroF1": 0.8866
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5733,
+     "macroF1": 0.8938
+    },
+    "2": {
+     "spellF1": 0.5755,
+     "macroF1": 0.9182
+    },
+    "3": {
+     "spellF1": 0.5154,
+     "macroF1": 0.8852
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5732,
+     "macroF1": 0.8941
+    },
+    "2": {
+     "spellF1": 0.5721,
+     "macroF1": 0.9175
+    },
+    "3": {
+     "spellF1": 0.5141,
+     "macroF1": 0.886
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5675,
+     "macroF1": 0.8934
+    },
+    "2": {
+     "spellF1": 0.5675,
+     "macroF1": 0.9178
+    },
+    "3": {
+     "spellF1": 0.5146,
+     "macroF1": 0.8866
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5733,
+     "macroF1": 0.8938
+    },
+    "2": {
+     "spellF1": 0.5759,
+     "macroF1": 0.9183
+    },
+    "3": {
+     "spellF1": 0.5155,
+     "macroF1": 0.8858
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5732,
+     "macroF1": 0.8941
+    },
+    "2": {
+     "spellF1": 0.5725,
+     "macroF1": 0.9176
+    },
+    "3": {
+     "spellF1": 0.5141,
+     "macroF1": 0.8865
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5675,
+     "macroF1": 0.8934
+    },
+    "2": {
+     "spellF1": 0.568,
+     "macroF1": 0.9179
+    },
+    "3": {
+     "spellF1": 0.5146,
+     "macroF1": 0.8872
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5733,
+     "macroF1": 0.8938
+    },
+    "2": {
+     "spellF1": 0.5759,
+     "macroF1": 0.9183
+    },
+    "3": {
+     "spellF1": 0.5174,
+     "macroF1": 0.8864
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5732,
+     "macroF1": 0.8941
+    },
+    "2": {
+     "spellF1": 0.5725,
+     "macroF1": 0.9176
+    },
+    "3": {
+     "spellF1": 0.5161,
+     "macroF1": 0.8872
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5675,
+     "macroF1": 0.8934
+    },
+    "2": {
+     "spellF1": 0.568,
+     "macroF1": 0.9179
+    },
+    "3": {
+     "spellF1": 0.5166,
+     "macroF1": 0.8878
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5631,
+     "macroF1": 0.8921
+    },
+    "2": {
+     "spellF1": 0.5632,
+     "macroF1": 0.9168
+    },
+    "3": {
+     "spellF1": 0.5065,
+     "macroF1": 0.8828
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5636,
+     "macroF1": 0.8924
+    },
+    "2": {
+     "spellF1": 0.5606,
+     "macroF1": 0.9165
+    },
+    "3": {
+     "spellF1": 0.5057,
+     "macroF1": 0.8837
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5595,
+     "macroF1": 0.892
+    },
+    "2": {
+     "spellF1": 0.5556,
+     "macroF1": 0.9168
+    },
+    "3": {
+     "spellF1": 0.5047,
+     "macroF1": 0.8843
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5631,
+     "macroF1": 0.8921
+    },
+    "2": {
+     "spellF1": 0.5636,
+     "macroF1": 0.9169
+    },
+    "3": {
+     "spellF1": 0.5065,
+     "macroF1": 0.8834
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5636,
+     "macroF1": 0.8924
+    },
+    "2": {
+     "spellF1": 0.561,
+     "macroF1": 0.9166
+    },
+    "3": {
+     "spellF1": 0.5058,
+     "macroF1": 0.8842
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5595,
+     "macroF1": 0.892
+    },
+    "2": {
+     "spellF1": 0.556,
+     "macroF1": 0.9169
+    },
+    "3": {
+     "spellF1": 0.5047,
+     "macroF1": 0.8849
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5631,
+     "macroF1": 0.8921
+    },
+    "2": {
+     "spellF1": 0.5636,
+     "macroF1": 0.9169
+    },
+    "3": {
+     "spellF1": 0.5085,
+     "macroF1": 0.8841
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5636,
+     "macroF1": 0.8924
+    },
+    "2": {
+     "spellF1": 0.561,
+     "macroF1": 0.9166
+    },
+    "3": {
+     "spellF1": 0.5077,
+     "macroF1": 0.8848
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 50,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5595,
+     "macroF1": 0.892
+    },
+    "2": {
+     "spellF1": 0.556,
+     "macroF1": 0.9169
+    },
+    "3": {
+     "spellF1": 0.5067,
+     "macroF1": 0.8855
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5499,
+     "macroF1": 0.8905
+    },
+    "2": {
+     "spellF1": 0.5587,
+     "macroF1": 0.9165
+    },
+    "3": {
+     "spellF1": 0.4973,
+     "macroF1": 0.8818
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5517,
+     "macroF1": 0.8907
+    },
+    "2": {
+     "spellF1": 0.5577,
+     "macroF1": 0.9167
+    },
+    "3": {
+     "spellF1": 0.4992,
+     "macroF1": 0.8828
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5511,
+     "macroF1": 0.8906
+    },
+    "2": {
+     "spellF1": 0.5524,
+     "macroF1": 0.9168
+    },
+    "3": {
+     "spellF1": 0.4986,
+     "macroF1": 0.8835
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5499,
+     "macroF1": 0.8905
+    },
+    "2": {
+     "spellF1": 0.5591,
+     "macroF1": 0.9167
+    },
+    "3": {
+     "spellF1": 0.4973,
+     "macroF1": 0.8823
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5517,
+     "macroF1": 0.8907
+    },
+    "2": {
+     "spellF1": 0.5582,
+     "macroF1": 0.9168
+    },
+    "3": {
+     "spellF1": 0.4992,
+     "macroF1": 0.8833
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5511,
+     "macroF1": 0.8906
+    },
+    "2": {
+     "spellF1": 0.5528,
+     "macroF1": 0.9169
+    },
+    "3": {
+     "spellF1": 0.4986,
+     "macroF1": 0.8841
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5499,
+     "macroF1": 0.8905
+    },
+    "2": {
+     "spellF1": 0.5591,
+     "macroF1": 0.9167
+    },
+    "3": {
+     "spellF1": 0.4991,
+     "macroF1": 0.883
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5517,
+     "macroF1": 0.8907
+    },
+    "2": {
+     "spellF1": 0.5582,
+     "macroF1": 0.9168
+    },
+    "3": {
+     "spellF1": 0.5011,
+     "macroF1": 0.884
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 60,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5511,
+     "macroF1": 0.8906
+    },
+    "2": {
+     "spellF1": 0.5528,
+     "macroF1": 0.9169
+    },
+    "3": {
+     "spellF1": 0.5004,
+     "macroF1": 0.8847
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5071,
+     "macroF1": 0.8863
+    },
+    "2": {
+     "spellF1": 0.5401,
+     "macroF1": 0.9145
+    },
+    "3": {
+     "spellF1": 0.4851,
+     "macroF1": 0.8801
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5084,
+     "macroF1": 0.8865
+    },
+    "2": {
+     "spellF1": 0.5429,
+     "macroF1": 0.9148
+    },
+    "3": {
+     "spellF1": 0.4868,
+     "macroF1": 0.8808
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5062,
+     "macroF1": 0.8861
+    },
+    "2": {
+     "spellF1": 0.5387,
+     "macroF1": 0.915
+    },
+    "3": {
+     "spellF1": 0.4843,
+     "macroF1": 0.8812
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5071,
+     "macroF1": 0.8863
+    },
+    "2": {
+     "spellF1": 0.5405,
+     "macroF1": 0.9146
+    },
+    "3": {
+     "spellF1": 0.4851,
+     "macroF1": 0.8806
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5084,
+     "macroF1": 0.8865
+    },
+    "2": {
+     "spellF1": 0.5433,
+     "macroF1": 0.9149
+    },
+    "3": {
+     "spellF1": 0.4868,
+     "macroF1": 0.8814
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 75,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5062,
+     "macroF1": 0.8861
+    },
+    "2": {
+     "spellF1": 0.5391,
+     "macroF1": 0.9152
+    },
+    "3": {
+     "spellF1": 0.4843,
+     "macroF1": 0.8817
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.0,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5071,
+     "macroF1": 0.8863
+    },
+    "2": {
+     "spellF1": 0.5405,
+     "macroF1": 0.9146
+    },
+    "3": {
+     "spellF1": 0.4869,
+     "macroF1": 0.8814
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.1,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5084,
+     "macroF1": 0.8865
+    },
+    "2": {
+     "spellF1": 0.5433,
+     "macroF1": 0.9149
+    },
+    "3": {
+     "spellF1": 0.4886,
+     "macroF1": 0.8821
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 4,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 100,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 75,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5062,
+     "macroF1": 0.8861
+    },
+    "2": {
+     "spellF1": 0.5391,
+     "macroF1": 0.9152
+    },
+    "3": {
+     "spellF1": 0.4861,
+     "macroF1": 0.8825
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 175,
+    "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 100,
+    "dead_long_gaps_from_start": true,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 2.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 50,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 40,
+    "smoothing_window": 0
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6021,
+     "macroF1": 0.8999
+    },
+    "2": {
+     "spellF1": 0.5911,
+     "macroF1": 0.9206
+    },
+    "3": {
+     "spellF1": 0.5515,
+     "macroF1": 0.8933
+    }
+   }
+  }
+ ]
+}
