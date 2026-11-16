@@ -1,0 +1,7 @@
+# Pinned versions the submission was generated with (Python 3.10).
+# The pipeline and the official scorer need only numpy and pandas.
+numpy==2.2.6
+pandas==2.3.3
+
+# Tests only
+pytest==9.1.1

@@ -1,0 +1,8511 @@
+{
+ "summary": {
+  "data": "Metrica Sports public sample games 1-3 (external); labels derived from their event data",
+  "scorer": "official evaluation/possession_metrics.py",
+  "baseline_per_game": {
+   "1": {
+    "spellF1": 0.4408,
+    "macroF1": 0.8278,
+    "n_pred_spells": 479,
+    "n_gt_spells": 383
+   },
+   "2": {
+    "spellF1": 0.4146,
+    "macroF1": 0.8577,
+    "n_pred_spells": 464,
+    "n_gt_spells": 359
+   },
+   "3": {
+    "spellF1": 0.3946,
+    "macroF1": 0.8409,
+    "n_pred_spells": 557,
+    "n_gt_spells": 408
+   }
+  },
+  "baseline_mean_spellF1": 0.4167,
+  "logo_folds": [
+   {
+    "held_out_game": 1,
+    "selected_params": {
+     "distance_threshold": 1.0,
+     "dwell_frames": 5,
+     "stoppage_speed_mps": 1.2,
+     "max_missing_hold_frames": 125,
+     "min_spell_frames": 25
+    },
+    "train_mean_spellF1": 0.5948,
+    "held_out": {
+     "spellF1": 0.6521,
+     "macroF1": 0.9078,
+     "n_pred_spells": 296,
+     "n_gt_spells": 383
+    },
+    "baseline_held_out": {
+     "spellF1": 0.4408,
+     "macroF1": 0.8278,
+     "n_pred_spells": 479,
+     "n_gt_spells": 383
+    }
+   },
+   {
+    "held_out_game": 2,
+    "selected_params": {
+     "distance_threshold": 1.0,
+     "dwell_frames": 5,
+     "stoppage_speed_mps": 1.2,
+     "max_missing_hold_frames": 125,
+     "min_spell_frames": 25
+    },
+    "train_mean_spellF1": 0.6254,
+    "held_out": {
+     "spellF1": 0.591,
+     "macroF1": 0.9071,
+     "n_pred_spells": 261,
+     "n_gt_spells": 359
+    },
+    "baseline_held_out": {
+     "spellF1": 0.4146,
+     "macroF1": 0.8577,
+     "n_pred_spells": 464,
+     "n_gt_spells": 359
+    }
+   },
+   {
+    "held_out_game": 3,
+    "selected_params": {
+     "distance_threshold": 1.0,
+     "dwell_frames": 3,
+     "stoppage_speed_mps": 1.2,
+     "max_missing_hold_frames": 125,
+     "min_spell_frames": 25
+    },
+    "train_mean_spellF1": 0.6318,
+    "held_out": {
+     "spellF1": 0.5703,
+     "macroF1": 0.8882,
+     "n_pred_spells": 421,
+     "n_gt_spells": 408
+    },
+    "baseline_held_out": {
+     "spellF1": 0.3946,
+     "macroF1": 0.8409,
+     "n_pred_spells": 557,
+     "n_gt_spells": 408
+    }
+   }
+  ],
+  "logo_mean_held_out_spellF1": 0.6045,
+  "logo_mean_held_out_macroF1": 0.901,
+  "final_params": {
+   "distance_threshold": 1.0,
+   "dwell_frames": 5,
+   "stoppage_speed_mps": 1.2,
+   "max_missing_hold_frames": 125,
+   "min_spell_frames": 25
+  },
+  "final_per_game": {
+   "1": {
+    "spellF1": 0.6521,
+    "macroF1": 0.9078,
+    "n_pred_spells": 296,
+    "n_gt_spells": 383
+   },
+   "2": {
+    "spellF1": 0.591,
+    "macroF1": 0.9071,
+    "n_pred_spells": 261,
+    "n_gt_spells": 359
+   },
+   "3": {
+    "spellF1": 0.5987,
+    "macroF1": 0.891,
+    "n_pred_spells": 335,
+    "n_gt_spells": 408
+   }
+  },
+  "n_configs": 288,
+  "grid": {
+   "distance_threshold": [
+    1.0,
+    1.5,
+    2.0,
+    3.0
+   ],
+   "dwell_frames": [
+    3,
+    5,
+    10,
+    20
+   ],
+   "stoppage_speed_mps": [
+    0.0,
+    0.8,
+    1.2
+   ],
+   "max_missing_hold_frames": [
+    125,
+    250,
+    500
+   ],
+   "min_spell_frames": [
+    25,
+    50
+   ]
+  },
+  "defaults_per_game": null
+ },
+ "all_configs": [
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6437,
+     "macroF1": 0.8936,
+     "n_pred_spells": 354,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.6047,
+     "macroF1": 0.8957,
+     "n_pred_spells": 319,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5516,
+     "macroF1": 0.8649,
+     "n_pred_spells": 415,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6076,
+     "macroF1": 0.8903,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5896,
+     "macroF1": 0.8964,
+     "n_pred_spells": 259,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.552,
+     "macroF1": 0.8637,
+     "n_pred_spells": 308,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6262,
+     "macroF1": 0.862,
+     "n_pred_spells": 351,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.584,
+     "macroF1": 0.8598,
+     "n_pred_spells": 315,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5289,
+     "macroF1": 0.802,
+     "n_pred_spells": 402,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5884,
+     "macroF1": 0.8588,
+     "n_pred_spells": 273,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5644,
+     "macroF1": 0.8606,
+     "n_pred_spells": 254,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5162,
+     "macroF1": 0.8009,
+     "n_pred_spells": 294,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6132,
+     "macroF1": 0.8124,
+     "n_pred_spells": 343,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5706,
+     "macroF1": 0.808,
+     "n_pred_spells": 307,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.513,
+     "macroF1": 0.7234,
+     "n_pred_spells": 392,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5722,
+     "macroF1": 0.8093,
+     "n_pred_spells": 265,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5468,
+     "macroF1": 0.8087,
+     "n_pred_spells": 246,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4886,
+     "macroF1": 0.7225,
+     "n_pred_spells": 283,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6428,
+     "macroF1": 0.8953,
+     "n_pred_spells": 355,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.6062,
+     "macroF1": 0.8984,
+     "n_pred_spells": 320,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5565,
+     "macroF1": 0.8697,
+     "n_pred_spells": 415,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6067,
+     "macroF1": 0.892,
+     "n_pred_spells": 277,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.59,
+     "macroF1": 0.8987,
+     "n_pred_spells": 258,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5559,
+     "macroF1": 0.8685,
+     "n_pred_spells": 308,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6264,
+     "macroF1": 0.8671,
+     "n_pred_spells": 352,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.592,
+     "macroF1": 0.868,
+     "n_pred_spells": 316,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5425,
+     "macroF1": 0.8212,
+     "n_pred_spells": 406,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5887,
+     "macroF1": 0.8638,
+     "n_pred_spells": 274,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5712,
+     "macroF1": 0.8683,
+     "n_pred_spells": 253,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5314,
+     "macroF1": 0.8201,
+     "n_pred_spells": 298,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.62,
+     "macroF1": 0.834,
+     "n_pred_spells": 348,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5899,
+     "macroF1": 0.8371,
+     "n_pred_spells": 313,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5327,
+     "macroF1": 0.7809,
+     "n_pred_spells": 400,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5801,
+     "macroF1": 0.8309,
+     "n_pred_spells": 270,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5681,
+     "macroF1": 0.8373,
+     "n_pred_spells": 250,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5133,
+     "macroF1": 0.7799,
+     "n_pred_spells": 291,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6562,
+     "macroF1": 0.9047,
+     "n_pred_spells": 354,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.6073,
+     "macroF1": 0.9056,
+     "n_pred_spells": 328,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5703,
+     "macroF1": 0.8882,
+     "n_pred_spells": 421,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6185,
+     "macroF1": 0.9008,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5907,
+     "macroF1": 0.9053,
+     "n_pred_spells": 262,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5699,
+     "macroF1": 0.8866,
+     "n_pred_spells": 310,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6535,
+     "macroF1": 0.8968,
+     "n_pred_spells": 354,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.6038,
+     "macroF1": 0.8947,
+     "n_pred_spells": 328,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5646,
+     "macroF1": 0.8724,
+     "n_pred_spells": 416,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6161,
+     "macroF1": 0.8931,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5868,
+     "macroF1": 0.8943,
+     "n_pred_spells": 262,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5636,
+     "macroF1": 0.8708,
+     "n_pred_spells": 306,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6525,
+     "macroF1": 0.8906,
+     "n_pred_spells": 352,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.6038,
+     "macroF1": 0.8886,
+     "n_pred_spells": 328,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5643,
+     "macroF1": 0.8691,
+     "n_pred_spells": 415,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6149,
+     "macroF1": 0.8868,
+     "n_pred_spells": 274,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5868,
+     "macroF1": 0.8883,
+     "n_pred_spells": 262,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5633,
+     "macroF1": 0.8675,
+     "n_pred_spells": 305,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6374,
+     "macroF1": 0.8958,
+     "n_pred_spells": 296,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5827,
+     "macroF1": 0.8971,
+     "n_pred_spells": 252,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5799,
+     "macroF1": 0.8677,
+     "n_pred_spells": 328,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6019,
+     "macroF1": 0.8917,
+     "n_pred_spells": 259,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5705,
+     "macroF1": 0.8962,
+     "n_pred_spells": 225,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5703,
+     "macroF1": 0.8665,
+     "n_pred_spells": 280,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6189,
+     "macroF1": 0.8637,
+     "n_pred_spells": 293,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5538,
+     "macroF1": 0.8602,
+     "n_pred_spells": 247,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5422,
+     "macroF1": 0.8019,
+     "n_pred_spells": 312,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5815,
+     "macroF1": 0.8597,
+     "n_pred_spells": 256,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.54,
+     "macroF1": 0.8594,
+     "n_pred_spells": 221,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5246,
+     "macroF1": 0.8008,
+     "n_pred_spells": 263,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6018,
+     "macroF1": 0.8134,
+     "n_pred_spells": 283,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5318,
+     "macroF1": 0.8074,
+     "n_pred_spells": 239,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5076,
+     "macroF1": 0.7204,
+     "n_pred_spells": 298,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5628,
+     "macroF1": 0.8095,
+     "n_pred_spells": 246,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5161,
+     "macroF1": 0.8065,
+     "n_pred_spells": 213,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4824,
+     "macroF1": 0.7193,
+     "n_pred_spells": 247,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6361,
+     "macroF1": 0.898,
+     "n_pred_spells": 298,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.585,
+     "macroF1": 0.8998,
+     "n_pred_spells": 253,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5848,
+     "macroF1": 0.8725,
+     "n_pred_spells": 328,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6016,
+     "macroF1": 0.8937,
+     "n_pred_spells": 260,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5715,
+     "macroF1": 0.8984,
+     "n_pred_spells": 224,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.575,
+     "macroF1": 0.8713,
+     "n_pred_spells": 280,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6189,
+     "macroF1": 0.8693,
+     "n_pred_spells": 295,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5628,
+     "macroF1": 0.8684,
+     "n_pred_spells": 248,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5552,
+     "macroF1": 0.8216,
+     "n_pred_spells": 316,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5825,
+     "macroF1": 0.8651,
+     "n_pred_spells": 257,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5478,
+     "macroF1": 0.867,
+     "n_pred_spells": 220,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.543,
+     "macroF1": 0.8207,
+     "n_pred_spells": 269,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6101,
+     "macroF1": 0.8361,
+     "n_pred_spells": 291,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.555,
+     "macroF1": 0.8367,
+     "n_pred_spells": 245,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5339,
+     "macroF1": 0.779,
+     "n_pred_spells": 309,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.573,
+     "macroF1": 0.8321,
+     "n_pred_spells": 253,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5396,
+     "macroF1": 0.8353,
+     "n_pred_spells": 217,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5172,
+     "macroF1": 0.7786,
+     "n_pred_spells": 261,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6521,
+     "macroF1": 0.9078,
+     "n_pred_spells": 296,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.591,
+     "macroF1": 0.9071,
+     "n_pred_spells": 261,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5987,
+     "macroF1": 0.891,
+     "n_pred_spells": 335,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6166,
+     "macroF1": 0.9034,
+     "n_pred_spells": 256,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5782,
+     "macroF1": 0.9054,
+     "n_pred_spells": 229,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.587,
+     "macroF1": 0.8897,
+     "n_pred_spells": 285,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6486,
+     "macroF1": 0.8999,
+     "n_pred_spells": 296,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5848,
+     "macroF1": 0.8959,
+     "n_pred_spells": 260,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5908,
+     "macroF1": 0.8738,
+     "n_pred_spells": 330,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6128,
+     "macroF1": 0.8956,
+     "n_pred_spells": 256,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5717,
+     "macroF1": 0.8942,
+     "n_pred_spells": 228,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5788,
+     "macroF1": 0.8726,
+     "n_pred_spells": 281,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6476,
+     "macroF1": 0.8936,
+     "n_pred_spells": 294,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5842,
+     "macroF1": 0.8899,
+     "n_pred_spells": 260,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5908,
+     "macroF1": 0.8701,
+     "n_pred_spells": 330,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6116,
+     "macroF1": 0.8892,
+     "n_pred_spells": 254,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.571,
+     "macroF1": 0.8882,
+     "n_pred_spells": 228,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5788,
+     "macroF1": 0.8689,
+     "n_pred_spells": 281,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5465,
+     "macroF1": 0.8773,
+     "n_pred_spells": 237,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5459,
+     "macroF1": 0.8896,
+     "n_pred_spells": 214,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4911,
+     "macroF1": 0.8469,
+     "n_pred_spells": 246,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5278,
+     "macroF1": 0.8756,
+     "n_pred_spells": 221,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5223,
+     "macroF1": 0.8884,
+     "n_pred_spells": 197,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4835,
+     "macroF1": 0.8465,
+     "n_pred_spells": 239,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5197,
+     "macroF1": 0.8451,
+     "n_pred_spells": 235,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5046,
+     "macroF1": 0.8527,
+     "n_pred_spells": 207,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4482,
+     "macroF1": 0.7796,
+     "n_pred_spells": 231,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.501,
+     "macroF1": 0.8435,
+     "n_pred_spells": 219,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4815,
+     "macroF1": 0.8516,
+     "n_pred_spells": 191,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4362,
+     "macroF1": 0.779,
+     "n_pred_spells": 222,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4923,
+     "macroF1": 0.7954,
+     "n_pred_spells": 228,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4767,
+     "macroF1": 0.8011,
+     "n_pred_spells": 199,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4077,
+     "macroF1": 0.6988,
+     "n_pred_spells": 217,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4726,
+     "macroF1": 0.7939,
+     "n_pred_spells": 212,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4524,
+     "macroF1": 0.7999,
+     "n_pred_spells": 183,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3902,
+     "macroF1": 0.698,
+     "n_pred_spells": 204,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.546,
+     "macroF1": 0.8793,
+     "n_pred_spells": 239,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5491,
+     "macroF1": 0.8922,
+     "n_pred_spells": 215,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4972,
+     "macroF1": 0.8517,
+     "n_pred_spells": 246,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5283,
+     "macroF1": 0.8776,
+     "n_pred_spells": 222,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.524,
+     "macroF1": 0.8905,
+     "n_pred_spells": 196,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4896,
+     "macroF1": 0.8512,
+     "n_pred_spells": 239,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5219,
+     "macroF1": 0.8505,
+     "n_pred_spells": 237,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5157,
+     "macroF1": 0.8607,
+     "n_pred_spells": 208,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4591,
+     "macroF1": 0.7992,
+     "n_pred_spells": 235,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5041,
+     "macroF1": 0.8488,
+     "n_pred_spells": 220,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4911,
+     "macroF1": 0.859,
+     "n_pred_spells": 190,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4509,
+     "macroF1": 0.7987,
+     "n_pred_spells": 228,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5066,
+     "macroF1": 0.8168,
+     "n_pred_spells": 236,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5064,
+     "macroF1": 0.8303,
+     "n_pred_spells": 205,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4358,
+     "macroF1": 0.7566,
+     "n_pred_spells": 229,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4884,
+     "macroF1": 0.8152,
+     "n_pred_spells": 219,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4813,
+     "macroF1": 0.8286,
+     "n_pred_spells": 187,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.423,
+     "macroF1": 0.7559,
+     "n_pred_spells": 218,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5623,
+     "macroF1": 0.8888,
+     "n_pred_spells": 238,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5533,
+     "macroF1": 0.8995,
+     "n_pred_spells": 223,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5083,
+     "macroF1": 0.8699,
+     "n_pred_spells": 253,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5439,
+     "macroF1": 0.8868,
+     "n_pred_spells": 220,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5293,
+     "macroF1": 0.8975,
+     "n_pred_spells": 201,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4989,
+     "macroF1": 0.8693,
+     "n_pred_spells": 243,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5578,
+     "macroF1": 0.8811,
+     "n_pred_spells": 238,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5439,
+     "macroF1": 0.8881,
+     "n_pred_spells": 222,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5006,
+     "macroF1": 0.8516,
+     "n_pred_spells": 248,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5393,
+     "macroF1": 0.8791,
+     "n_pred_spells": 220,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5216,
+     "macroF1": 0.8862,
+     "n_pred_spells": 200,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4921,
+     "macroF1": 0.8511,
+     "n_pred_spells": 239,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5559,
+     "macroF1": 0.8738,
+     "n_pred_spells": 238,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5418,
+     "macroF1": 0.8821,
+     "n_pred_spells": 222,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5,
+     "macroF1": 0.848,
+     "n_pred_spells": 248,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5373,
+     "macroF1": 0.8719,
+     "n_pred_spells": 220,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5195,
+     "macroF1": 0.8802,
+     "n_pred_spells": 200,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4915,
+     "macroF1": 0.8475,
+     "n_pred_spells": 239,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4859,
+     "macroF1": 0.8621,
+     "n_pred_spells": 218,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.494,
+     "macroF1": 0.8777,
+     "n_pred_spells": 194,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4263,
+     "macroF1": 0.8277,
+     "n_pred_spells": 216,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4747,
+     "macroF1": 0.8611,
+     "n_pred_spells": 211,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.487,
+     "macroF1": 0.8777,
+     "n_pred_spells": 188,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4238,
+     "macroF1": 0.8274,
+     "n_pred_spells": 215,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4563,
+     "macroF1": 0.8312,
+     "n_pred_spells": 214,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4484,
+     "macroF1": 0.8415,
+     "n_pred_spells": 186,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.377,
+     "macroF1": 0.7598,
+     "n_pred_spells": 201,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4447,
+     "macroF1": 0.8302,
+     "n_pred_spells": 207,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4445,
+     "macroF1": 0.8415,
+     "n_pred_spells": 180,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.371,
+     "macroF1": 0.7595,
+     "n_pred_spells": 198,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4278,
+     "macroF1": 0.7813,
+     "n_pred_spells": 207,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4142,
+     "macroF1": 0.7899,
+     "n_pred_spells": 178,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3254,
+     "macroF1": 0.677,
+     "n_pred_spells": 182,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4158,
+     "macroF1": 0.7803,
+     "n_pred_spells": 200,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4098,
+     "macroF1": 0.79,
+     "n_pred_spells": 172,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3189,
+     "macroF1": 0.6767,
+     "n_pred_spells": 179,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4849,
+     "macroF1": 0.8641,
+     "n_pred_spells": 220,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4968,
+     "macroF1": 0.8802,
+     "n_pred_spells": 195,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4333,
+     "macroF1": 0.8323,
+     "n_pred_spells": 216,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4746,
+     "macroF1": 0.8631,
+     "n_pred_spells": 212,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4879,
+     "macroF1": 0.8797,
+     "n_pred_spells": 187,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4308,
+     "macroF1": 0.8321,
+     "n_pred_spells": 215,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4581,
+     "macroF1": 0.8364,
+     "n_pred_spells": 216,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4579,
+     "macroF1": 0.8493,
+     "n_pred_spells": 187,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3889,
+     "macroF1": 0.7792,
+     "n_pred_spells": 205,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4474,
+     "macroF1": 0.8355,
+     "n_pred_spells": 208,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.452,
+     "macroF1": 0.8489,
+     "n_pred_spells": 179,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3863,
+     "macroF1": 0.7789,
+     "n_pred_spells": 204,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4435,
+     "macroF1": 0.8025,
+     "n_pred_spells": 215,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4471,
+     "macroF1": 0.8191,
+     "n_pred_spells": 184,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3548,
+     "macroF1": 0.7338,
+     "n_pred_spells": 194,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4325,
+     "macroF1": 0.8015,
+     "n_pred_spells": 207,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4411,
+     "macroF1": 0.8186,
+     "n_pred_spells": 176,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3521,
+     "macroF1": 0.7335,
+     "n_pred_spells": 193,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.501,
+     "macroF1": 0.8732,
+     "n_pred_spells": 219,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5032,
+     "macroF1": 0.8875,
+     "n_pred_spells": 203,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4463,
+     "macroF1": 0.8503,
+     "n_pred_spells": 223,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4909,
+     "macroF1": 0.8722,
+     "n_pred_spells": 211,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4967,
+     "macroF1": 0.8866,
+     "n_pred_spells": 191,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4415,
+     "macroF1": 0.8499,
+     "n_pred_spells": 219,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4963,
+     "macroF1": 0.8656,
+     "n_pred_spells": 219,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4871,
+     "macroF1": 0.8763,
+     "n_pred_spells": 201,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4339,
+     "macroF1": 0.8307,
+     "n_pred_spells": 218,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4862,
+     "macroF1": 0.8646,
+     "n_pred_spells": 211,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4839,
+     "macroF1": 0.8754,
+     "n_pred_spells": 189,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4302,
+     "macroF1": 0.8304,
+     "n_pred_spells": 215,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4937,
+     "macroF1": 0.8579,
+     "n_pred_spells": 219,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.485,
+     "macroF1": 0.8704,
+     "n_pred_spells": 201,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4314,
+     "macroF1": 0.8275,
+     "n_pred_spells": 217,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4835,
+     "macroF1": 0.8569,
+     "n_pred_spells": 211,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4818,
+     "macroF1": 0.8695,
+     "n_pred_spells": 189,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4277,
+     "macroF1": 0.8272,
+     "n_pred_spells": 214,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5985,
+     "macroF1": 0.879,
+     "n_pred_spells": 403,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5611,
+     "macroF1": 0.8847,
+     "n_pred_spells": 361,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5049,
+     "macroF1": 0.8528,
+     "n_pred_spells": 473,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5833,
+     "macroF1": 0.8791,
+     "n_pred_spells": 287,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5659,
+     "macroF1": 0.8877,
+     "n_pred_spells": 263,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5111,
+     "macroF1": 0.8547,
+     "n_pred_spells": 305,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5834,
+     "macroF1": 0.8476,
+     "n_pred_spells": 400,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5413,
+     "macroF1": 0.8492,
+     "n_pred_spells": 357,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4827,
+     "macroF1": 0.7906,
+     "n_pred_spells": 458,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5649,
+     "macroF1": 0.8477,
+     "n_pred_spells": 284,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.542,
+     "macroF1": 0.8521,
+     "n_pred_spells": 258,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4707,
+     "macroF1": 0.7925,
+     "n_pred_spells": 288,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5719,
+     "macroF1": 0.7983,
+     "n_pred_spells": 392,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5311,
+     "macroF1": 0.7978,
+     "n_pred_spells": 349,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4694,
+     "macroF1": 0.7129,
+     "n_pred_spells": 451,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5493,
+     "macroF1": 0.7983,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5228,
+     "macroF1": 0.8006,
+     "n_pred_spells": 250,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4509,
+     "macroF1": 0.7142,
+     "n_pred_spells": 276,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.599,
+     "macroF1": 0.8824,
+     "n_pred_spells": 403,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5614,
+     "macroF1": 0.8874,
+     "n_pred_spells": 362,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5103,
+     "macroF1": 0.8576,
+     "n_pred_spells": 473,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5833,
+     "macroF1": 0.8825,
+     "n_pred_spells": 287,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.564,
+     "macroF1": 0.8899,
+     "n_pred_spells": 263,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5161,
+     "macroF1": 0.8595,
+     "n_pred_spells": 305,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5849,
+     "macroF1": 0.8544,
+     "n_pred_spells": 400,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5478,
+     "macroF1": 0.8573,
+     "n_pred_spells": 358,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.497,
+     "macroF1": 0.8097,
+     "n_pred_spells": 462,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5661,
+     "macroF1": 0.8545,
+     "n_pred_spells": 284,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5465,
+     "macroF1": 0.8597,
+     "n_pred_spells": 258,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.489,
+     "macroF1": 0.8116,
+     "n_pred_spells": 293,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5792,
+     "macroF1": 0.8216,
+     "n_pred_spells": 396,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5457,
+     "macroF1": 0.8266,
+     "n_pred_spells": 355,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4896,
+     "macroF1": 0.7702,
+     "n_pred_spells": 458,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5581,
+     "macroF1": 0.8217,
+     "n_pred_spells": 280,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5427,
+     "macroF1": 0.829,
+     "n_pred_spells": 255,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4755,
+     "macroF1": 0.7714,
+     "n_pred_spells": 286,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6104,
+     "macroF1": 0.8915,
+     "n_pred_spells": 402,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5584,
+     "macroF1": 0.8942,
+     "n_pred_spells": 371,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5207,
+     "macroF1": 0.8759,
+     "n_pred_spells": 480,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5946,
+     "macroF1": 0.8909,
+     "n_pred_spells": 285,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5649,
+     "macroF1": 0.8961,
+     "n_pred_spells": 267,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5283,
+     "macroF1": 0.8774,
+     "n_pred_spells": 309,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6084,
+     "macroF1": 0.8837,
+     "n_pred_spells": 402,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5551,
+     "macroF1": 0.8834,
+     "n_pred_spells": 371,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.517,
+     "macroF1": 0.8606,
+     "n_pred_spells": 474,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5916,
+     "macroF1": 0.8831,
+     "n_pred_spells": 285,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.561,
+     "macroF1": 0.8853,
+     "n_pred_spells": 267,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.521,
+     "macroF1": 0.8621,
+     "n_pred_spells": 303,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6074,
+     "macroF1": 0.8774,
+     "n_pred_spells": 400,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5551,
+     "macroF1": 0.8774,
+     "n_pred_spells": 371,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.517,
+     "macroF1": 0.8573,
+     "n_pred_spells": 474,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5904,
+     "macroF1": 0.8769,
+     "n_pred_spells": 283,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.561,
+     "macroF1": 0.8792,
+     "n_pred_spells": 267,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.521,
+     "macroF1": 0.8588,
+     "n_pred_spells": 303,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6282,
+     "macroF1": 0.8891,
+     "n_pred_spells": 348,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5824,
+     "macroF1": 0.8911,
+     "n_pred_spells": 310,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5265,
+     "macroF1": 0.8601,
+     "n_pred_spells": 427,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5894,
+     "macroF1": 0.8844,
+     "n_pred_spells": 278,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5708,
+     "macroF1": 0.8913,
+     "n_pred_spells": 243,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5431,
+     "macroF1": 0.862,
+     "n_pred_spells": 305,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6102,
+     "macroF1": 0.8575,
+     "n_pred_spells": 346,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5569,
+     "macroF1": 0.8551,
+     "n_pred_spells": 304,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4978,
+     "macroF1": 0.7969,
+     "n_pred_spells": 414,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5706,
+     "macroF1": 0.8529,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5407,
+     "macroF1": 0.8553,
+     "n_pred_spells": 238,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5043,
+     "macroF1": 0.7986,
+     "n_pred_spells": 290,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5953,
+     "macroF1": 0.8078,
+     "n_pred_spells": 338,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5435,
+     "macroF1": 0.8035,
+     "n_pred_spells": 296,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.48,
+     "macroF1": 0.7177,
+     "n_pred_spells": 407,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5542,
+     "macroF1": 0.8034,
+     "n_pred_spells": 268,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5195,
+     "macroF1": 0.8037,
+     "n_pred_spells": 230,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4806,
+     "macroF1": 0.7188,
+     "n_pred_spells": 277,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6279,
+     "macroF1": 0.893,
+     "n_pred_spells": 349,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5851,
+     "macroF1": 0.8938,
+     "n_pred_spells": 311,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5313,
+     "macroF1": 0.8649,
+     "n_pred_spells": 427,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5894,
+     "macroF1": 0.8881,
+     "n_pred_spells": 278,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5724,
+     "macroF1": 0.8935,
+     "n_pred_spells": 242,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.547,
+     "macroF1": 0.8667,
+     "n_pred_spells": 305,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.611,
+     "macroF1": 0.8647,
+     "n_pred_spells": 347,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5657,
+     "macroF1": 0.8632,
+     "n_pred_spells": 305,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5119,
+     "macroF1": 0.816,
+     "n_pred_spells": 418,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5718,
+     "macroF1": 0.86,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5477,
+     "macroF1": 0.8629,
+     "n_pred_spells": 237,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5202,
+     "macroF1": 0.8178,
+     "n_pred_spells": 294,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6028,
+     "macroF1": 0.8317,
+     "n_pred_spells": 343,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.561,
+     "macroF1": 0.8323,
+     "n_pred_spells": 302,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4994,
+     "macroF1": 0.7751,
+     "n_pred_spells": 413,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5624,
+     "macroF1": 0.8271,
+     "n_pred_spells": 272,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.543,
+     "macroF1": 0.8321,
+     "n_pred_spells": 234,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.502,
+     "macroF1": 0.7762,
+     "n_pred_spells": 286,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6413,
+     "macroF1": 0.9024,
+     "n_pred_spells": 348,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5844,
+     "macroF1": 0.9009,
+     "n_pred_spells": 320,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.542,
+     "macroF1": 0.8834,
+     "n_pred_spells": 434,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6021,
+     "macroF1": 0.8974,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5726,
+     "macroF1": 0.9,
+     "n_pred_spells": 246,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5584,
+     "macroF1": 0.8848,
+     "n_pred_spells": 309,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6386,
+     "macroF1": 0.8946,
+     "n_pred_spells": 348,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5791,
+     "macroF1": 0.8899,
+     "n_pred_spells": 320,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5338,
+     "macroF1": 0.8673,
+     "n_pred_spells": 429,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5997,
+     "macroF1": 0.8896,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5666,
+     "macroF1": 0.8891,
+     "n_pred_spells": 246,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5485,
+     "macroF1": 0.8686,
+     "n_pred_spells": 303,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6376,
+     "macroF1": 0.8883,
+     "n_pred_spells": 346,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5791,
+     "macroF1": 0.8839,
+     "n_pred_spells": 320,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5338,
+     "macroF1": 0.864,
+     "n_pred_spells": 429,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5985,
+     "macroF1": 0.8834,
+     "n_pred_spells": 274,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5666,
+     "macroF1": 0.883,
+     "n_pred_spells": 246,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5485,
+     "macroF1": 0.8653,
+     "n_pred_spells": 303,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5901,
+     "macroF1": 0.8819,
+     "n_pred_spells": 263,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5628,
+     "macroF1": 0.8925,
+     "n_pred_spells": 233,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5417,
+     "macroF1": 0.858,
+     "n_pred_spells": 281,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5701,
+     "macroF1": 0.8802,
+     "n_pred_spells": 245,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5376,
+     "macroF1": 0.8913,
+     "n_pred_spells": 208,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5371,
+     "macroF1": 0.8579,
+     "n_pred_spells": 260,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5665,
+     "macroF1": 0.8495,
+     "n_pred_spells": 261,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5256,
+     "macroF1": 0.8555,
+     "n_pred_spells": 227,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4975,
+     "macroF1": 0.7914,
+     "n_pred_spells": 265,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5457,
+     "macroF1": 0.8479,
+     "n_pred_spells": 243,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5004,
+     "macroF1": 0.8542,
+     "n_pred_spells": 203,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4868,
+     "macroF1": 0.7911,
+     "n_pred_spells": 242,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5428,
+     "macroF1": 0.8,
+     "n_pred_spells": 253,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4997,
+     "macroF1": 0.8035,
+     "n_pred_spells": 219,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4596,
+     "macroF1": 0.7099,
+     "n_pred_spells": 250,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.521,
+     "macroF1": 0.7984,
+     "n_pred_spells": 235,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4729,
+     "macroF1": 0.8023,
+     "n_pred_spells": 195,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4437,
+     "macroF1": 0.7093,
+     "n_pred_spells": 223,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.591,
+     "macroF1": 0.8859,
+     "n_pred_spells": 264,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5659,
+     "macroF1": 0.8952,
+     "n_pred_spells": 234,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5475,
+     "macroF1": 0.8628,
+     "n_pred_spells": 281,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5713,
+     "macroF1": 0.8841,
+     "n_pred_spells": 245,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5392,
+     "macroF1": 0.8934,
+     "n_pred_spells": 207,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5431,
+     "macroF1": 0.8627,
+     "n_pred_spells": 260,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5699,
+     "macroF1": 0.8569,
+     "n_pred_spells": 262,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5363,
+     "macroF1": 0.8636,
+     "n_pred_spells": 228,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5099,
+     "macroF1": 0.8111,
+     "n_pred_spells": 269,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5495,
+     "macroF1": 0.8551,
+     "n_pred_spells": 243,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5098,
+     "macroF1": 0.8618,
+     "n_pred_spells": 202,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.503,
+     "macroF1": 0.811,
+     "n_pred_spells": 248,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.558,
+     "macroF1": 0.8237,
+     "n_pred_spells": 260,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5267,
+     "macroF1": 0.8326,
+     "n_pred_spells": 225,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4888,
+     "macroF1": 0.7684,
+     "n_pred_spells": 263,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5372,
+     "macroF1": 0.822,
+     "n_pred_spells": 241,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4996,
+     "macroF1": 0.8308,
+     "n_pred_spells": 199,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.478,
+     "macroF1": 0.768,
+     "n_pred_spells": 238,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6043,
+     "macroF1": 0.8955,
+     "n_pred_spells": 263,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.571,
+     "macroF1": 0.9025,
+     "n_pred_spells": 242,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5567,
+     "macroF1": 0.8812,
+     "n_pred_spells": 289,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5859,
+     "macroF1": 0.8938,
+     "n_pred_spells": 243,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5457,
+     "macroF1": 0.9004,
+     "n_pred_spells": 212,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5527,
+     "macroF1": 0.881,
+     "n_pred_spells": 265,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6006,
+     "macroF1": 0.8878,
+     "n_pred_spells": 263,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5607,
+     "macroF1": 0.8912,
+     "n_pred_spells": 241,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5462,
+     "macroF1": 0.8632,
+     "n_pred_spells": 284,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5821,
+     "macroF1": 0.886,
+     "n_pred_spells": 243,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5368,
+     "macroF1": 0.8891,
+     "n_pred_spells": 211,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5429,
+     "macroF1": 0.8631,
+     "n_pred_spells": 261,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5991,
+     "macroF1": 0.8811,
+     "n_pred_spells": 262,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5587,
+     "macroF1": 0.8852,
+     "n_pred_spells": 241,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5451,
+     "macroF1": 0.8595,
+     "n_pred_spells": 284,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5805,
+     "macroF1": 0.8794,
+     "n_pred_spells": 242,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5347,
+     "macroF1": 0.8831,
+     "n_pred_spells": 211,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5417,
+     "macroF1": 0.8594,
+     "n_pred_spells": 261,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4881,
+     "macroF1": 0.8605,
+     "n_pred_spells": 221,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5014,
+     "macroF1": 0.8804,
+     "n_pred_spells": 205,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4487,
+     "macroF1": 0.8331,
+     "n_pred_spells": 233,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4783,
+     "macroF1": 0.8596,
+     "n_pred_spells": 215,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4957,
+     "macroF1": 0.8807,
+     "n_pred_spells": 197,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4455,
+     "macroF1": 0.8333,
+     "n_pred_spells": 225,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4599,
+     "macroF1": 0.829,
+     "n_pred_spells": 218,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4589,
+     "macroF1": 0.8434,
+     "n_pred_spells": 198,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4013,
+     "macroF1": 0.7654,
+     "n_pred_spells": 218,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4497,
+     "macroF1": 0.8281,
+     "n_pred_spells": 212,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4554,
+     "macroF1": 0.8436,
+     "n_pred_spells": 190,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3935,
+     "macroF1": 0.7655,
+     "n_pred_spells": 208,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.433,
+     "macroF1": 0.779,
+     "n_pred_spells": 211,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4284,
+     "macroF1": 0.7918,
+     "n_pred_spells": 190,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3535,
+     "macroF1": 0.6821,
+     "n_pred_spells": 203,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4224,
+     "macroF1": 0.7782,
+     "n_pred_spells": 205,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4244,
+     "macroF1": 0.7921,
+     "n_pred_spells": 182,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.341,
+     "macroF1": 0.6822,
+     "n_pred_spells": 189,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4879,
+     "macroF1": 0.8643,
+     "n_pred_spells": 222,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5048,
+     "macroF1": 0.8829,
+     "n_pred_spells": 206,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4549,
+     "macroF1": 0.8377,
+     "n_pred_spells": 233,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4789,
+     "macroF1": 0.8634,
+     "n_pred_spells": 215,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4973,
+     "macroF1": 0.8827,
+     "n_pred_spells": 196,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4518,
+     "macroF1": 0.838,
+     "n_pred_spells": 225,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4625,
+     "macroF1": 0.8361,
+     "n_pred_spells": 219,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4703,
+     "macroF1": 0.8512,
+     "n_pred_spells": 199,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4121,
+     "macroF1": 0.7849,
+     "n_pred_spells": 222,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4531,
+     "macroF1": 0.8352,
+     "n_pred_spells": 212,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.465,
+     "macroF1": 0.851,
+     "n_pred_spells": 189,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4084,
+     "macroF1": 0.7851,
+     "n_pred_spells": 214,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4486,
+     "macroF1": 0.8022,
+     "n_pred_spells": 218,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4598,
+     "macroF1": 0.8209,
+     "n_pred_spells": 196,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3807,
+     "macroF1": 0.7394,
+     "n_pred_spells": 214,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4391,
+     "macroF1": 0.8013,
+     "n_pred_spells": 211,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4543,
+     "macroF1": 0.8207,
+     "n_pred_spells": 186,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3731,
+     "macroF1": 0.7396,
+     "n_pred_spells": 202,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5025,
+     "macroF1": 0.8736,
+     "n_pred_spells": 222,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5103,
+     "macroF1": 0.8903,
+     "n_pred_spells": 214,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4673,
+     "macroF1": 0.856,
+     "n_pred_spells": 240,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4936,
+     "macroF1": 0.8727,
+     "n_pred_spells": 215,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5045,
+     "macroF1": 0.8896,
+     "n_pred_spells": 200,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4622,
+     "macroF1": 0.8561,
+     "n_pred_spells": 229,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4979,
+     "macroF1": 0.866,
+     "n_pred_spells": 222,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4986,
+     "macroF1": 0.8786,
+     "n_pred_spells": 213,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4535,
+     "macroF1": 0.8368,
+     "n_pred_spells": 235,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.489,
+     "macroF1": 0.8651,
+     "n_pred_spells": 215,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4953,
+     "macroF1": 0.8779,
+     "n_pred_spells": 199,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4493,
+     "macroF1": 0.837,
+     "n_pred_spells": 225,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4952,
+     "macroF1": 0.8583,
+     "n_pred_spells": 222,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4965,
+     "macroF1": 0.8727,
+     "n_pred_spells": 213,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4523,
+     "macroF1": 0.8331,
+     "n_pred_spells": 235,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 1.5,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4863,
+     "macroF1": 0.8574,
+     "n_pred_spells": 215,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4932,
+     "macroF1": 0.872,
+     "n_pred_spells": 199,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4487,
+     "macroF1": 0.8333,
+     "n_pred_spells": 225,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5492,
+     "macroF1": 0.8628,
+     "n_pred_spells": 443,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5144,
+     "macroF1": 0.8743,
+     "n_pred_spells": 417,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4703,
+     "macroF1": 0.8424,
+     "n_pred_spells": 519,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.547,
+     "macroF1": 0.8647,
+     "n_pred_spells": 292,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5406,
+     "macroF1": 0.8779,
+     "n_pred_spells": 267,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4949,
+     "macroF1": 0.8464,
+     "n_pred_spells": 330,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5366,
+     "macroF1": 0.8317,
+     "n_pred_spells": 440,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4988,
+     "macroF1": 0.8387,
+     "n_pred_spells": 414,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4531,
+     "macroF1": 0.7806,
+     "n_pred_spells": 504,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5292,
+     "macroF1": 0.8336,
+     "n_pred_spells": 289,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5235,
+     "macroF1": 0.8423,
+     "n_pred_spells": 263,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4651,
+     "macroF1": 0.7848,
+     "n_pred_spells": 311,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5242,
+     "macroF1": 0.7828,
+     "n_pred_spells": 432,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4894,
+     "macroF1": 0.7878,
+     "n_pred_spells": 406,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4415,
+     "macroF1": 0.7036,
+     "n_pred_spells": 497,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.514,
+     "macroF1": 0.7846,
+     "n_pred_spells": 280,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5054,
+     "macroF1": 0.7919,
+     "n_pred_spells": 256,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4487,
+     "macroF1": 0.7066,
+     "n_pred_spells": 299,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5495,
+     "macroF1": 0.8677,
+     "n_pred_spells": 444,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5148,
+     "macroF1": 0.8769,
+     "n_pred_spells": 418,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4755,
+     "macroF1": 0.8471,
+     "n_pred_spells": 519,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5462,
+     "macroF1": 0.8697,
+     "n_pred_spells": 293,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5387,
+     "macroF1": 0.8801,
+     "n_pred_spells": 267,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5004,
+     "macroF1": 0.8512,
+     "n_pred_spells": 329,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5379,
+     "macroF1": 0.8401,
+     "n_pred_spells": 441,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5018,
+     "macroF1": 0.8467,
+     "n_pred_spells": 415,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4624,
+     "macroF1": 0.7996,
+     "n_pred_spells": 508,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5296,
+     "macroF1": 0.842,
+     "n_pred_spells": 290,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5235,
+     "macroF1": 0.8499,
+     "n_pred_spells": 263,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.479,
+     "macroF1": 0.8037,
+     "n_pred_spells": 316,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5327,
+     "macroF1": 0.8076,
+     "n_pred_spells": 437,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5001,
+     "macroF1": 0.8165,
+     "n_pred_spells": 412,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.457,
+     "macroF1": 0.7604,
+     "n_pred_spells": 504,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.522,
+     "macroF1": 0.8094,
+     "n_pred_spells": 286,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5195,
+     "macroF1": 0.8195,
+     "n_pred_spells": 260,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4686,
+     "macroF1": 0.7633,
+     "n_pred_spells": 309,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5584,
+     "macroF1": 0.8761,
+     "n_pred_spells": 443,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5084,
+     "macroF1": 0.8832,
+     "n_pred_spells": 427,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4867,
+     "macroF1": 0.8652,
+     "n_pred_spells": 524,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5542,
+     "macroF1": 0.8774,
+     "n_pred_spells": 289,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5312,
+     "macroF1": 0.8853,
+     "n_pred_spells": 272,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5154,
+     "macroF1": 0.8692,
+     "n_pred_spells": 330,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5569,
+     "macroF1": 0.8684,
+     "n_pred_spells": 443,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5064,
+     "macroF1": 0.8725,
+     "n_pred_spells": 427,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4821,
+     "macroF1": 0.8498,
+     "n_pred_spells": 518,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5518,
+     "macroF1": 0.8697,
+     "n_pred_spells": 289,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5287,
+     "macroF1": 0.8746,
+     "n_pred_spells": 272,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.51,
+     "macroF1": 0.8538,
+     "n_pred_spells": 323,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5563,
+     "macroF1": 0.8622,
+     "n_pred_spells": 441,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5064,
+     "macroF1": 0.8666,
+     "n_pred_spells": 427,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4821,
+     "macroF1": 0.8465,
+     "n_pred_spells": 518,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.551,
+     "macroF1": 0.8635,
+     "n_pred_spells": 287,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5287,
+     "macroF1": 0.8687,
+     "n_pred_spells": 272,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.51,
+     "macroF1": 0.8505,
+     "n_pred_spells": 323,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.57,
+     "macroF1": 0.8725,
+     "n_pred_spells": 410,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5265,
+     "macroF1": 0.8798,
+     "n_pred_spells": 378,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4917,
+     "macroF1": 0.8506,
+     "n_pred_spells": 469,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5555,
+     "macroF1": 0.8723,
+     "n_pred_spells": 291,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5476,
+     "macroF1": 0.8845,
+     "n_pred_spells": 259,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5004,
+     "macroF1": 0.8514,
+     "n_pred_spells": 321,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5547,
+     "macroF1": 0.8412,
+     "n_pred_spells": 408,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5087,
+     "macroF1": 0.8442,
+     "n_pred_spells": 373,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4753,
+     "macroF1": 0.7886,
+     "n_pred_spells": 453,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5381,
+     "macroF1": 0.8411,
+     "n_pred_spells": 289,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5264,
+     "macroF1": 0.8487,
+     "n_pred_spells": 255,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.467,
+     "macroF1": 0.7893,
+     "n_pred_spells": 302,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.542,
+     "macroF1": 0.7919,
+     "n_pred_spells": 400,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4978,
+     "macroF1": 0.7928,
+     "n_pred_spells": 365,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4588,
+     "macroF1": 0.7104,
+     "n_pred_spells": 443,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5229,
+     "macroF1": 0.7918,
+     "n_pred_spells": 281,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5076,
+     "macroF1": 0.7972,
+     "n_pred_spells": 247,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4443,
+     "macroF1": 0.7106,
+     "n_pred_spells": 287,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5696,
+     "macroF1": 0.8778,
+     "n_pred_spells": 412,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5279,
+     "macroF1": 0.8824,
+     "n_pred_spells": 379,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4967,
+     "macroF1": 0.8554,
+     "n_pred_spells": 469,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5547,
+     "macroF1": 0.8776,
+     "n_pred_spells": 292,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5469,
+     "macroF1": 0.8866,
+     "n_pred_spells": 259,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5053,
+     "macroF1": 0.8561,
+     "n_pred_spells": 321,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5554,
+     "macroF1": 0.8499,
+     "n_pred_spells": 410,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5162,
+     "macroF1": 0.8522,
+     "n_pred_spells": 374,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4855,
+     "macroF1": 0.8077,
+     "n_pred_spells": 457,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5385,
+     "macroF1": 0.8497,
+     "n_pred_spells": 290,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5322,
+     "macroF1": 0.8563,
+     "n_pred_spells": 255,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4839,
+     "macroF1": 0.8084,
+     "n_pred_spells": 307,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5501,
+     "macroF1": 0.8173,
+     "n_pred_spells": 406,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5134,
+     "macroF1": 0.8216,
+     "n_pred_spells": 371,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4759,
+     "macroF1": 0.7676,
+     "n_pred_spells": 451,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5303,
+     "macroF1": 0.8171,
+     "n_pred_spells": 286,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.529,
+     "macroF1": 0.8256,
+     "n_pred_spells": 252,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4708,
+     "macroF1": 0.7677,
+     "n_pred_spells": 298,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5808,
+     "macroF1": 0.8866,
+     "n_pred_spells": 409,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5255,
+     "macroF1": 0.889,
+     "n_pred_spells": 387,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5081,
+     "macroF1": 0.8737,
+     "n_pred_spells": 476,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5646,
+     "macroF1": 0.8861,
+     "n_pred_spells": 290,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5424,
+     "macroF1": 0.8924,
+     "n_pred_spells": 262,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5191,
+     "macroF1": 0.874,
+     "n_pred_spells": 324,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5783,
+     "macroF1": 0.8789,
+     "n_pred_spells": 409,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5239,
+     "macroF1": 0.8781,
+     "n_pred_spells": 387,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5048,
+     "macroF1": 0.8583,
+     "n_pred_spells": 470,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5629,
+     "macroF1": 0.8784,
+     "n_pred_spells": 290,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5398,
+     "macroF1": 0.8815,
+     "n_pred_spells": 262,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5148,
+     "macroF1": 0.8586,
+     "n_pred_spells": 317,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5772,
+     "macroF1": 0.8727,
+     "n_pred_spells": 407,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5239,
+     "macroF1": 0.8722,
+     "n_pred_spells": 387,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.504,
+     "macroF1": 0.855,
+     "n_pred_spells": 469,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5615,
+     "macroF1": 0.8722,
+     "n_pred_spells": 288,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5398,
+     "macroF1": 0.8755,
+     "n_pred_spells": 262,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5149,
+     "macroF1": 0.8552,
+     "n_pred_spells": 316,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5861,
+     "macroF1": 0.8794,
+     "n_pred_spells": 294,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5578,
+     "macroF1": 0.8913,
+     "n_pred_spells": 267,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5402,
+     "macroF1": 0.8581,
+     "n_pred_spells": 314,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5696,
+     "macroF1": 0.8784,
+     "n_pred_spells": 268,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5589,
+     "macroF1": 0.892,
+     "n_pred_spells": 225,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5292,
+     "macroF1": 0.8576,
+     "n_pred_spells": 267,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5653,
+     "macroF1": 0.847,
+     "n_pred_spells": 292,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5277,
+     "macroF1": 0.8546,
+     "n_pred_spells": 261,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5023,
+     "macroF1": 0.792,
+     "n_pred_spells": 300,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5473,
+     "macroF1": 0.846,
+     "n_pred_spells": 266,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.525,
+     "macroF1": 0.8553,
+     "n_pred_spells": 220,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4838,
+     "macroF1": 0.7914,
+     "n_pred_spells": 251,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.545,
+     "macroF1": 0.7971,
+     "n_pred_spells": 282,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5059,
+     "macroF1": 0.8022,
+     "n_pred_spells": 253,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4663,
+     "macroF1": 0.7104,
+     "n_pred_spells": 286,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5258,
+     "macroF1": 0.7962,
+     "n_pred_spells": 256,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5002,
+     "macroF1": 0.8028,
+     "n_pred_spells": 212,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.443,
+     "macroF1": 0.7097,
+     "n_pred_spells": 234,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5867,
+     "macroF1": 0.885,
+     "n_pred_spells": 296,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5608,
+     "macroF1": 0.894,
+     "n_pred_spells": 268,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5463,
+     "macroF1": 0.8628,
+     "n_pred_spells": 314,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5699,
+     "macroF1": 0.8839,
+     "n_pred_spells": 269,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5605,
+     "macroF1": 0.8942,
+     "n_pred_spells": 224,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5351,
+     "macroF1": 0.8623,
+     "n_pred_spells": 267,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5678,
+     "macroF1": 0.856,
+     "n_pred_spells": 294,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5378,
+     "macroF1": 0.8627,
+     "n_pred_spells": 262,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.518,
+     "macroF1": 0.8117,
+     "n_pred_spells": 304,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5495,
+     "macroF1": 0.855,
+     "n_pred_spells": 267,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5343,
+     "macroF1": 0.8629,
+     "n_pred_spells": 219,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5029,
+     "macroF1": 0.8112,
+     "n_pred_spells": 257,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5585,
+     "macroF1": 0.8232,
+     "n_pred_spells": 291,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5301,
+     "macroF1": 0.8315,
+     "n_pred_spells": 259,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4975,
+     "macroF1": 0.7692,
+     "n_pred_spells": 298,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5391,
+     "macroF1": 0.8221,
+     "n_pred_spells": 264,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5259,
+     "macroF1": 0.8317,
+     "n_pred_spells": 216,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4769,
+     "macroF1": 0.7684,
+     "n_pred_spells": 247,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.6024,
+     "macroF1": 0.8946,
+     "n_pred_spells": 295,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5644,
+     "macroF1": 0.9013,
+     "n_pred_spells": 276,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5578,
+     "macroF1": 0.8813,
+     "n_pred_spells": 322,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5825,
+     "macroF1": 0.8931,
+     "n_pred_spells": 268,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5667,
+     "macroF1": 0.9012,
+     "n_pred_spells": 229,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5473,
+     "macroF1": 0.8806,
+     "n_pred_spells": 271,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5988,
+     "macroF1": 0.8869,
+     "n_pred_spells": 295,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.559,
+     "macroF1": 0.8901,
+     "n_pred_spells": 275,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5501,
+     "macroF1": 0.8638,
+     "n_pred_spells": 317,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5788,
+     "macroF1": 0.8853,
+     "n_pred_spells": 268,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5601,
+     "macroF1": 0.89,
+     "n_pred_spells": 228,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5399,
+     "macroF1": 0.8632,
+     "n_pred_spells": 267,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5976,
+     "macroF1": 0.8806,
+     "n_pred_spells": 293,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5577,
+     "macroF1": 0.8841,
+     "n_pred_spells": 275,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.549,
+     "macroF1": 0.8602,
+     "n_pred_spells": 317,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5775,
+     "macroF1": 0.879,
+     "n_pred_spells": 266,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5588,
+     "macroF1": 0.884,
+     "n_pred_spells": 228,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5387,
+     "macroF1": 0.8596,
+     "n_pred_spells": 267,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5121,
+     "macroF1": 0.8621,
+     "n_pred_spells": 231,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5005,
+     "macroF1": 0.8795,
+     "n_pred_spells": 214,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4598,
+     "macroF1": 0.8395,
+     "n_pred_spells": 248,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5026,
+     "macroF1": 0.8612,
+     "n_pred_spells": 225,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4959,
+     "macroF1": 0.8796,
+     "n_pred_spells": 200,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4624,
+     "macroF1": 0.8402,
+     "n_pred_spells": 239,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4831,
+     "macroF1": 0.8305,
+     "n_pred_spells": 228,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4616,
+     "macroF1": 0.8432,
+     "n_pred_spells": 206,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4125,
+     "macroF1": 0.773,
+     "n_pred_spells": 231,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4734,
+     "macroF1": 0.8297,
+     "n_pred_spells": 222,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4537,
+     "macroF1": 0.8433,
+     "n_pred_spells": 192,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4108,
+     "macroF1": 0.7736,
+     "n_pred_spells": 220,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4576,
+     "macroF1": 0.7808,
+     "n_pred_spells": 221,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4316,
+     "macroF1": 0.7915,
+     "n_pred_spells": 198,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3701,
+     "macroF1": 0.69,
+     "n_pred_spells": 220,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4475,
+     "macroF1": 0.78,
+     "n_pred_spells": 215,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4228,
+     "macroF1": 0.7917,
+     "n_pred_spells": 184,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3635,
+     "macroF1": 0.6906,
+     "n_pred_spells": 205,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.511,
+     "macroF1": 0.8676,
+     "n_pred_spells": 233,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5038,
+     "macroF1": 0.882,
+     "n_pred_spells": 215,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4659,
+     "macroF1": 0.8442,
+     "n_pred_spells": 248,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5025,
+     "macroF1": 0.8667,
+     "n_pred_spells": 226,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4975,
+     "macroF1": 0.8817,
+     "n_pred_spells": 199,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4686,
+     "macroF1": 0.8449,
+     "n_pred_spells": 239,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4848,
+     "macroF1": 0.8394,
+     "n_pred_spells": 230,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4728,
+     "macroF1": 0.8511,
+     "n_pred_spells": 207,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.423,
+     "macroF1": 0.7925,
+     "n_pred_spells": 235,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4759,
+     "macroF1": 0.8385,
+     "n_pred_spells": 223,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4633,
+     "macroF1": 0.8507,
+     "n_pred_spells": 191,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4252,
+     "macroF1": 0.7932,
+     "n_pred_spells": 226,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4719,
+     "macroF1": 0.8058,
+     "n_pred_spells": 229,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4625,
+     "macroF1": 0.8207,
+     "n_pred_spells": 204,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4,
+     "macroF1": 0.7481,
+     "n_pred_spells": 231,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4628,
+     "macroF1": 0.805,
+     "n_pred_spells": 222,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4527,
+     "macroF1": 0.8204,
+     "n_pred_spells": 188,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.3981,
+     "macroF1": 0.7488,
+     "n_pred_spells": 218,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.526,
+     "macroF1": 0.8769,
+     "n_pred_spells": 233,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5079,
+     "macroF1": 0.8894,
+     "n_pred_spells": 223,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4753,
+     "macroF1": 0.8623,
+     "n_pred_spells": 256,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5176,
+     "macroF1": 0.876,
+     "n_pred_spells": 226,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5032,
+     "macroF1": 0.8886,
+     "n_pred_spells": 203,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4761,
+     "macroF1": 0.863,
+     "n_pred_spells": 244,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5214,
+     "macroF1": 0.8693,
+     "n_pred_spells": 233,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5,
+     "macroF1": 0.8785,
+     "n_pred_spells": 221,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4637,
+     "macroF1": 0.8438,
+     "n_pred_spells": 251,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.513,
+     "macroF1": 0.8684,
+     "n_pred_spells": 226,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4929,
+     "macroF1": 0.8776,
+     "n_pred_spells": 201,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4654,
+     "macroF1": 0.8445,
+     "n_pred_spells": 240,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5195,
+     "macroF1": 0.862,
+     "n_pred_spells": 233,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4979,
+     "macroF1": 0.8725,
+     "n_pred_spells": 221,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4631,
+     "macroF1": 0.8402,
+     "n_pred_spells": 251,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 2.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.511,
+     "macroF1": 0.8611,
+     "n_pred_spells": 226,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4907,
+     "macroF1": 0.8717,
+     "n_pred_spells": 201,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4648,
+     "macroF1": 0.8409,
+     "n_pred_spells": 240,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.474,
+     "macroF1": 0.8443,
+     "n_pred_spells": 487,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4654,
+     "macroF1": 0.8635,
+     "n_pred_spells": 448,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4264,
+     "macroF1": 0.8285,
+     "n_pred_spells": 577,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5233,
+     "macroF1": 0.8492,
+     "n_pred_spells": 295,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.516,
+     "macroF1": 0.8724,
+     "n_pred_spells": 279,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.459,
+     "macroF1": 0.8324,
+     "n_pred_spells": 324,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4629,
+     "macroF1": 0.8136,
+     "n_pred_spells": 482,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4519,
+     "macroF1": 0.8286,
+     "n_pred_spells": 443,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4161,
+     "macroF1": 0.768,
+     "n_pred_spells": 558,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5077,
+     "macroF1": 0.8188,
+     "n_pred_spells": 289,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4987,
+     "macroF1": 0.8372,
+     "n_pred_spells": 273,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.441,
+     "macroF1": 0.7729,
+     "n_pred_spells": 305,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4514,
+     "macroF1": 0.765,
+     "n_pred_spells": 473,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4439,
+     "macroF1": 0.7785,
+     "n_pred_spells": 434,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4046,
+     "macroF1": 0.6913,
+     "n_pred_spells": 550,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4917,
+     "macroF1": 0.77,
+     "n_pred_spells": 280,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4832,
+     "macroF1": 0.7871,
+     "n_pred_spells": 266,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4251,
+     "macroF1": 0.6955,
+     "n_pred_spells": 292,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4735,
+     "macroF1": 0.8537,
+     "n_pred_spells": 488,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4658,
+     "macroF1": 0.8661,
+     "n_pred_spells": 449,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4301,
+     "macroF1": 0.8332,
+     "n_pred_spells": 577,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5218,
+     "macroF1": 0.8587,
+     "n_pred_spells": 297,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5121,
+     "macroF1": 0.8741,
+     "n_pred_spells": 280,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4629,
+     "macroF1": 0.8372,
+     "n_pred_spells": 323,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4628,
+     "macroF1": 0.8265,
+     "n_pred_spells": 483,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4543,
+     "macroF1": 0.8365,
+     "n_pred_spells": 444,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4198,
+     "macroF1": 0.7867,
+     "n_pred_spells": 563,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5068,
+     "macroF1": 0.8318,
+     "n_pred_spells": 291,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4967,
+     "macroF1": 0.8443,
+     "n_pred_spells": 274,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.448,
+     "macroF1": 0.7913,
+     "n_pred_spells": 309,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4575,
+     "macroF1": 0.7944,
+     "n_pred_spells": 479,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.452,
+     "macroF1": 0.8065,
+     "n_pred_spells": 441,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4149,
+     "macroF1": 0.7476,
+     "n_pred_spells": 558,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4991,
+     "macroF1": 0.7996,
+     "n_pred_spells": 287,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.494,
+     "macroF1": 0.8141,
+     "n_pred_spells": 271,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4379,
+     "macroF1": 0.7515,
+     "n_pred_spells": 300,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4802,
+     "macroF1": 0.8618,
+     "n_pred_spells": 485,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4582,
+     "macroF1": 0.872,
+     "n_pred_spells": 459,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4384,
+     "macroF1": 0.8509,
+     "n_pred_spells": 581,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.529,
+     "macroF1": 0.8664,
+     "n_pred_spells": 290,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5087,
+     "macroF1": 0.8795,
+     "n_pred_spells": 285,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4726,
+     "macroF1": 0.8551,
+     "n_pred_spells": 325,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4788,
+     "macroF1": 0.8542,
+     "n_pred_spells": 485,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4562,
+     "macroF1": 0.8613,
+     "n_pred_spells": 459,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4354,
+     "macroF1": 0.8358,
+     "n_pred_spells": 574,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5266,
+     "macroF1": 0.8588,
+     "n_pred_spells": 290,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5062,
+     "macroF1": 0.8688,
+     "n_pred_spells": 285,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4661,
+     "macroF1": 0.8399,
+     "n_pred_spells": 318,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4785,
+     "macroF1": 0.8481,
+     "n_pred_spells": 483,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4562,
+     "macroF1": 0.8555,
+     "n_pred_spells": 459,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4354,
+     "macroF1": 0.8326,
+     "n_pred_spells": 574,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 3,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5264,
+     "macroF1": 0.8526,
+     "n_pred_spells": 288,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5062,
+     "macroF1": 0.8629,
+     "n_pred_spells": 285,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4661,
+     "macroF1": 0.8367,
+     "n_pred_spells": 318,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4907,
+     "macroF1": 0.8495,
+     "n_pred_spells": 464,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4861,
+     "macroF1": 0.8676,
+     "n_pred_spells": 435,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4391,
+     "macroF1": 0.8335,
+     "n_pred_spells": 553,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5398,
+     "macroF1": 0.8539,
+     "n_pred_spells": 295,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5348,
+     "macroF1": 0.8766,
+     "n_pred_spells": 282,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4864,
+     "macroF1": 0.8378,
+     "n_pred_spells": 333,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4791,
+     "macroF1": 0.8186,
+     "n_pred_spells": 461,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4754,
+     "macroF1": 0.8326,
+     "n_pred_spells": 431,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4298,
+     "macroF1": 0.7726,
+     "n_pred_spells": 533,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5258,
+     "macroF1": 0.8229,
+     "n_pred_spells": 291,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5214,
+     "macroF1": 0.8414,
+     "n_pred_spells": 277,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4633,
+     "macroF1": 0.7777,
+     "n_pred_spells": 312,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4671,
+     "macroF1": 0.7697,
+     "n_pred_spells": 452,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4655,
+     "macroF1": 0.7818,
+     "n_pred_spells": 423,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4185,
+     "macroF1": 0.6956,
+     "n_pred_spells": 523,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5107,
+     "macroF1": 0.7739,
+     "n_pred_spells": 282,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5072,
+     "macroF1": 0.7906,
+     "n_pred_spells": 268,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4459,
+     "macroF1": 0.6996,
+     "n_pred_spells": 298,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4906,
+     "macroF1": 0.859,
+     "n_pred_spells": 465,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.487,
+     "macroF1": 0.8702,
+     "n_pred_spells": 436,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4441,
+     "macroF1": 0.8382,
+     "n_pred_spells": 553,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5384,
+     "macroF1": 0.8634,
+     "n_pred_spells": 296,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5315,
+     "macroF1": 0.8783,
+     "n_pred_spells": 283,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4919,
+     "macroF1": 0.8425,
+     "n_pred_spells": 332,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4795,
+     "macroF1": 0.8316,
+     "n_pred_spells": 462,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4784,
+     "macroF1": 0.8406,
+     "n_pred_spells": 432,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4351,
+     "macroF1": 0.7913,
+     "n_pred_spells": 538,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.525,
+     "macroF1": 0.8359,
+     "n_pred_spells": 292,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5199,
+     "macroF1": 0.8485,
+     "n_pred_spells": 278,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4735,
+     "macroF1": 0.7961,
+     "n_pred_spells": 316,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4737,
+     "macroF1": 0.7994,
+     "n_pred_spells": 458,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4761,
+     "macroF1": 0.8103,
+     "n_pred_spells": 429,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4302,
+     "macroF1": 0.7521,
+     "n_pred_spells": 533,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.518,
+     "macroF1": 0.8036,
+     "n_pred_spells": 288,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5161,
+     "macroF1": 0.818,
+     "n_pred_spells": 275,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4631,
+     "macroF1": 0.7558,
+     "n_pred_spells": 308,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4972,
+     "macroF1": 0.8672,
+     "n_pred_spells": 461,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4789,
+     "macroF1": 0.8761,
+     "n_pred_spells": 447,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4529,
+     "macroF1": 0.8561,
+     "n_pred_spells": 559,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5454,
+     "macroF1": 0.8712,
+     "n_pred_spells": 291,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5255,
+     "macroF1": 0.8837,
+     "n_pred_spells": 288,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5017,
+     "macroF1": 0.8605,
+     "n_pred_spells": 335,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4957,
+     "macroF1": 0.8596,
+     "n_pred_spells": 461,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4774,
+     "macroF1": 0.8653,
+     "n_pred_spells": 447,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.45,
+     "macroF1": 0.8408,
+     "n_pred_spells": 552,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.543,
+     "macroF1": 0.8636,
+     "n_pred_spells": 291,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.523,
+     "macroF1": 0.8729,
+     "n_pred_spells": 288,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4974,
+     "macroF1": 0.8452,
+     "n_pred_spells": 327,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.495,
+     "macroF1": 0.8534,
+     "n_pred_spells": 459,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4774,
+     "macroF1": 0.8594,
+     "n_pred_spells": 447,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4492,
+     "macroF1": 0.8375,
+     "n_pred_spells": 551,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 5,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5423,
+     "macroF1": 0.8573,
+     "n_pred_spells": 289,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.523,
+     "macroF1": 0.867,
+     "n_pred_spells": 288,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4975,
+     "macroF1": 0.8419,
+     "n_pred_spells": 326,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5836,
+     "macroF1": 0.8694,
+     "n_pred_spells": 375,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5418,
+     "macroF1": 0.8822,
+     "n_pred_spells": 349,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5053,
+     "macroF1": 0.8516,
+     "n_pred_spells": 439,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5714,
+     "macroF1": 0.8693,
+     "n_pred_spells": 275,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5586,
+     "macroF1": 0.8877,
+     "n_pred_spells": 254,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5087,
+     "macroF1": 0.852,
+     "n_pred_spells": 313,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5683,
+     "macroF1": 0.8375,
+     "n_pred_spells": 373,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5181,
+     "macroF1": 0.8465,
+     "n_pred_spells": 342,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4802,
+     "macroF1": 0.7871,
+     "n_pred_spells": 425,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5524,
+     "macroF1": 0.8374,
+     "n_pred_spells": 273,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5311,
+     "macroF1": 0.8518,
+     "n_pred_spells": 248,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.467,
+     "macroF1": 0.7873,
+     "n_pred_spells": 297,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5531,
+     "macroF1": 0.7873,
+     "n_pred_spells": 364,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4999,
+     "macroF1": 0.795,
+     "n_pred_spells": 334,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4585,
+     "macroF1": 0.7066,
+     "n_pred_spells": 412,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5342,
+     "macroF1": 0.7872,
+     "n_pred_spells": 264,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5082,
+     "macroF1": 0.8001,
+     "n_pred_spells": 240,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4405,
+     "macroF1": 0.7075,
+     "n_pred_spells": 283,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5839,
+     "macroF1": 0.8796,
+     "n_pred_spells": 376,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5433,
+     "macroF1": 0.8848,
+     "n_pred_spells": 350,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.511,
+     "macroF1": 0.8563,
+     "n_pred_spells": 439,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5697,
+     "macroF1": 0.8794,
+     "n_pred_spells": 277,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5588,
+     "macroF1": 0.8898,
+     "n_pred_spells": 253,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5154,
+     "macroF1": 0.8567,
+     "n_pred_spells": 313,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5696,
+     "macroF1": 0.8512,
+     "n_pred_spells": 374,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5254,
+     "macroF1": 0.8545,
+     "n_pred_spells": 343,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4903,
+     "macroF1": 0.8067,
+     "n_pred_spells": 429,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.552,
+     "macroF1": 0.851,
+     "n_pred_spells": 275,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5373,
+     "macroF1": 0.8593,
+     "n_pred_spells": 247,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4872,
+     "macroF1": 0.8071,
+     "n_pred_spells": 303,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5634,
+     "macroF1": 0.8184,
+     "n_pred_spells": 371,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5202,
+     "macroF1": 0.8239,
+     "n_pred_spells": 340,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4767,
+     "macroF1": 0.7642,
+     "n_pred_spells": 421,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5423,
+     "macroF1": 0.8182,
+     "n_pred_spells": 272,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5313,
+     "macroF1": 0.8286,
+     "n_pred_spells": 244,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4723,
+     "macroF1": 0.7653,
+     "n_pred_spells": 295,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5942,
+     "macroF1": 0.8887,
+     "n_pred_spells": 375,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.54,
+     "macroF1": 0.8919,
+     "n_pred_spells": 358,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5213,
+     "macroF1": 0.8748,
+     "n_pred_spells": 446,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5833,
+     "macroF1": 0.8884,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5562,
+     "macroF1": 0.8964,
+     "n_pred_spells": 258,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.528,
+     "macroF1": 0.8747,
+     "n_pred_spells": 314,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5916,
+     "macroF1": 0.881,
+     "n_pred_spells": 375,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5358,
+     "macroF1": 0.8808,
+     "n_pred_spells": 357,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5146,
+     "macroF1": 0.8581,
+     "n_pred_spells": 440,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5809,
+     "macroF1": 0.8807,
+     "n_pred_spells": 276,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5513,
+     "macroF1": 0.8853,
+     "n_pred_spells": 257,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5188,
+     "macroF1": 0.858,
+     "n_pred_spells": 309,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.591,
+     "macroF1": 0.8747,
+     "n_pred_spells": 373,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5352,
+     "macroF1": 0.8748,
+     "n_pred_spells": 357,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5142,
+     "macroF1": 0.8544,
+     "n_pred_spells": 440,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 10,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5802,
+     "macroF1": 0.8744,
+     "n_pred_spells": 274,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5506,
+     "macroF1": 0.8793,
+     "n_pred_spells": 257,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5183,
+     "macroF1": 0.8544,
+     "n_pred_spells": 309,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5323,
+     "macroF1": 0.8611,
+     "n_pred_spells": 264,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5259,
+     "macroF1": 0.8821,
+     "n_pred_spells": 235,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5012,
+     "macroF1": 0.846,
+     "n_pred_spells": 284,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5256,
+     "macroF1": 0.8609,
+     "n_pred_spells": 241,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5216,
+     "macroF1": 0.8833,
+     "n_pred_spells": 210,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5011,
+     "macroF1": 0.847,
+     "n_pred_spells": 257,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5075,
+     "macroF1": 0.8292,
+     "n_pred_spells": 261,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4901,
+     "macroF1": 0.8458,
+     "n_pred_spells": 227,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4568,
+     "macroF1": 0.7796,
+     "n_pred_spells": 268,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4998,
+     "macroF1": 0.829,
+     "n_pred_spells": 238,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4863,
+     "macroF1": 0.847,
+     "n_pred_spells": 202,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.447,
+     "macroF1": 0.7804,
+     "n_pred_spells": 239,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4862,
+     "macroF1": 0.7796,
+     "n_pred_spells": 253,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4637,
+     "macroF1": 0.7944,
+     "n_pred_spells": 219,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4152,
+     "macroF1": 0.6975,
+     "n_pred_spells": 252,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50,
+    "enable_stoppage_speed": false
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4777,
+     "macroF1": 0.7794,
+     "n_pred_spells": 230,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4586,
+     "macroF1": 0.7956,
+     "n_pred_spells": 194,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4006,
+     "macroF1": 0.6985,
+     "n_pred_spells": 219,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5321,
+     "macroF1": 0.8713,
+     "n_pred_spells": 265,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5291,
+     "macroF1": 0.8847,
+     "n_pred_spells": 236,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5069,
+     "macroF1": 0.8507,
+     "n_pred_spells": 284,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5246,
+     "macroF1": 0.8711,
+     "n_pred_spells": 243,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5232,
+     "macroF1": 0.8854,
+     "n_pred_spells": 209,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5071,
+     "macroF1": 0.8517,
+     "n_pred_spells": 257,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5098,
+     "macroF1": 0.8429,
+     "n_pred_spells": 262,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5009,
+     "macroF1": 0.8537,
+     "n_pred_spells": 228,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4688,
+     "macroF1": 0.7992,
+     "n_pred_spells": 272,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5014,
+     "macroF1": 0.8427,
+     "n_pred_spells": 240,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4957,
+     "macroF1": 0.8544,
+     "n_pred_spells": 201,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4631,
+     "macroF1": 0.8002,
+     "n_pred_spells": 245,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4995,
+     "macroF1": 0.8099,
+     "n_pred_spells": 260,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4918,
+     "macroF1": 0.8233,
+     "n_pred_spells": 225,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4488,
+     "macroF1": 0.7564,
+     "n_pred_spells": 264,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 0.8,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.4908,
+     "macroF1": 0.8098,
+     "n_pred_spells": 238,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.4862,
+     "macroF1": 0.824,
+     "n_pred_spells": 198,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.4386,
+     "macroF1": 0.7573,
+     "n_pred_spells": 235,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5481,
+     "macroF1": 0.8807,
+     "n_pred_spells": 265,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5347,
+     "macroF1": 0.892,
+     "n_pred_spells": 244,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5149,
+     "macroF1": 0.869,
+     "n_pred_spells": 292,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 125,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5421,
+     "macroF1": 0.8805,
+     "n_pred_spells": 242,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5329,
+     "macroF1": 0.8923,
+     "n_pred_spells": 213,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5136,
+     "macroF1": 0.8696,
+     "n_pred_spells": 261,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5444,
+     "macroF1": 0.873,
+     "n_pred_spells": 265,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5278,
+     "macroF1": 0.8811,
+     "n_pred_spells": 242,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5042,
+     "macroF1": 0.851,
+     "n_pred_spells": 287,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 250,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5382,
+     "macroF1": 0.8728,
+     "n_pred_spells": 242,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5277,
+     "macroF1": 0.8814,
+     "n_pred_spells": 211,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5029,
+     "macroF1": 0.8517,
+     "n_pred_spells": 257,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 25
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5428,
+     "macroF1": 0.8664,
+     "n_pred_spells": 264,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5258,
+     "macroF1": 0.8752,
+     "n_pred_spells": 242,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5036,
+     "macroF1": 0.8474,
+     "n_pred_spells": 287,
+     "n_gt_spells": 408
+    }
+   }
+  },
+  {
+   "params": {
+    "distance_threshold": 3.0,
+    "dwell_frames": 20,
+    "stoppage_speed_mps": 1.2,
+    "max_missing_hold_frames": 500,
+    "min_spell_frames": 50
+   },
+   "per_game": {
+    "1": {
+     "spellF1": 0.5365,
+     "macroF1": 0.8662,
+     "n_pred_spells": 241,
+     "n_gt_spells": 383
+    },
+    "2": {
+     "spellF1": 0.5256,
+     "macroF1": 0.8755,
+     "n_pred_spells": 211,
+     "n_gt_spells": 359
+    },
+    "3": {
+     "spellF1": 0.5023,
+     "macroF1": 0.848,
+     "n_pred_spells": 257,
+     "n_gt_spells": 408
+    }
+   }
+  }
+ ]
+}

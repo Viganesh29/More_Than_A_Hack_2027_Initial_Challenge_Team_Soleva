@@ -1,0 +1,36 @@
+{
+  "schema_version": "2.0.0",
+  "model_name": "rule_based_possession_v2",
+  "notes": "Parameters selected by scripts/external_cv.py on the public Metrica sample games only (best mean spellF1 over games 1-3 against event-derived labels). Nothing was fitted to the competition match, its video or its ground truth.",
+  "external_cv": {
+    "baseline_mean_spellF1": 0.4167,
+    "logo_mean_held_out_spellF1": 0.6045,
+    "logo_mean_held_out_macroF1": 0.901
+  },
+  "parameters": {
+    "distance_threshold": 1.0,
+    "pitch_margin": 1.0,
+    "enable_hysteresis": true,
+    "dwell_frames": 5,
+    "switch_margin_m": 0.5,
+    "hold_on_missing_ball": true,
+    "hold_on_loose_ball": true,
+    "max_missing_hold_frames": 125,
+    "prolonged_loose_dead_frames": 125,
+    "enable_dead_ball": true,
+    "enable_stoppage_speed": true,
+    "stoppage_speed_mps": 1.2,
+    "stoppage_ball_speed_mps": 2.0,
+    "stoppage_min_frames": 50,
+    "speed_smoothing_frames": 25,
+    "max_player_speed_mps": 12.0,
+    "min_tracked_players": 6,
+    "enable_restart_attribution": true,
+    "restart_search_window": 3.5,
+    "enable_stoppage_bridging": true,
+    "bridging_max_gap": 25,
+    "enable_spell_pruning": true,
+    "min_spell_frames": 25,
+    "smoothing_window": 0
+  }
+}
