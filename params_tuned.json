@@ -1,23 +1,28 @@
 {
-  "schema_version": "2.0.0",
-  "model_name": "rule_based_possession_v2",
-  "notes": "Parameters selected by scripts/external_cv.py on the public Metrica sample games only (best mean spellF1 over games 1-3 against event-derived labels). Nothing was fitted to the competition match, its video or its ground truth.",
+  "schema_version": "3.0.0",
+  "model_name": "rule_based_possession_v3",
+  "notes": "Parameters selected by scripts/robust_cv.py on degraded versions of the public Metrica sample games (leave-one-game-out, best mean spellF1). Nothing was fitted to the competition match, its video or its ground truth.",
   "external_cv": {
-    "baseline_mean_spellF1": 0.4167,
-    "logo_mean_held_out_spellF1": 0.654,
-    "logo_mean_held_out_macroF1": 0.9344
+    "selection": "degraded Metrica games, leave-one-game-out",
+    "logo_mean_held_out_spellF1_degraded": 0.5816,
+    "previous_params_same_data": 0.5172,
+    "clean_games_spellF1": {
+      "1": 0.6891,
+      "2": 0.6456,
+      "3": 0.6306
+    }
   },
   "parameters": {
     "distance_threshold": 1.0,
     "pitch_margin": 1.0,
     "enable_hysteresis": true,
-    "dwell_frames": 5,
-    "switch_margin_m": 0.5,
+    "dwell_frames": 3,
+    "switch_margin_m": 0.25,
     "hold_on_missing_ball": true,
     "hold_on_loose_ball": true,
-    "max_missing_hold_frames": 125,
+    "max_missing_hold_frames": 175,
     "prolonged_loose_dead_frames": 125,
-    "ball_interp_max_gap": 50,
+    "ball_interp_max_gap": 100,
     "dead_long_gaps_from_start": true,
     "enable_dead_ball": true,
     "enable_stoppage_speed": false,
@@ -28,11 +33,11 @@
     "max_player_speed_mps": 12.0,
     "min_tracked_players": 6,
     "enable_restart_attribution": true,
-    "restart_search_window": 3.5,
+    "restart_search_window": 2.5,
     "enable_stoppage_bridging": true,
-    "bridging_max_gap": 25,
+    "bridging_max_gap": 50,
     "enable_spell_pruning": true,
-    "min_spell_frames": 25,
+    "min_spell_frames": 40,
     "smoothing_window": 0
   }
 }

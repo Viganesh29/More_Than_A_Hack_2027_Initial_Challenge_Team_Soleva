@@ -23,14 +23,15 @@ The pipeline (`run_pipeline.py`) works as follows:
    numpy and maps track slots to teams from the XML (the first `<Team>` is home). It aligns frames
    by `video_frame = frame_id - 1`. The graded halves are taken from the official `games.py`
    (video frames 11185–90651 and 110808–190197).
-2. **Ball flight and per-frame features.** Tracking gaps of up to 2 s with the ball observed on
+2. **Ball flight and per-frame features.** Tracking gaps of up to 4 s with the ball observed on
    both sides are filled by linear interpolation, so a turnover or a line crossing that happens
    while the tracker has lost the ball is timed inside the gap. We then compute the distance from
    the ball to the nearest home player and to the nearest away player, whether the ball is
    tracked, and whether it is outside the pitch.
 3. **State machine per half** (H / A / D). The rules are listed in Section 4.
-4. **Post-processing.** Short D gaps between two runs of the same team are bridged, unless the
-   ball was clearly out. Possessions shorter than 1 s are merged into the neighbouring possession.
+4. **Post-processing.** D gaps of up to 2 s between two runs of the same team are bridged, unless
+   the ball was clearly out. Possessions shorter than 1.6 s are merged into the neighbouring
+   possession.
 5. **Output.** Frames outside the two halves are written as `X`, which the scorer never grades.
    The file is validated with the official `possession_metrics.validate_submission`.
 
@@ -73,33 +74,49 @@ parameter.**
 
 For each held-out game, we choose the parameter set with the best mean spellF1 on the other two
 games and report its score on the held-out game. The comparison point is the official baseline
-algorithm (nearest player, ±50-frame majority vote) run on the same games.
+algorithm (nearest player, ±50-frame majority vote) run on the same games. Parameters were selected
+in three stages. Before each of stages 2 and 3, we decided to keep a change only if the held-out
+mean improved and at least two of the three held-out games improved.
 
-| held-out game | engine spellF1 | engine macroF1 | baseline spellF1 | baseline macroF1 | possessions: engine / reference |
-|---|---|---|---|---|---|
-| Game 1 | 0.689 | 0.929 | 0.441 | 0.828 | 293 / 383 |
-| Game 2 | 0.646 | 0.939 | 0.415 | 0.858 | 253 / 359 |
-| Game 3 | 0.627 | 0.935 | 0.395 | 0.841 | 407 / 408 |
-| **mean** | **0.654** | **0.934** | **0.417** | **0.842** | |
+1. **Core rules, clean tracking** (288 parameter sets: control radius 1.0–3.0 m, dwell 3–20
+   frames, stoppage-speed rule off / 0.8 / 1.2 m/s, missing-ball hold 5–20 s, minimum possession
+   1–2 s). Held-out mean spellF1 0.605.
+2. **Ball-gap handling, clean tracking** (288 parameter sets, including the stage-1 model
+   unchanged: ball interpolation off / 1 / 2 / 5 s, long gaps dead from their start yes / no).
+   All three held-out games improved; mean 0.605 → 0.654. Most of the gain comes from treating
+   long gaps as dead from their start (about +0.04). Interpolation adds about +0.01, within the
+   noise band. Once long gaps are handled, the stoppage-speed rule no longer helps, and the search
+   switched it off.
+3. **Robustness to automatic-tracking noise** (`scripts/robust_cv.py`). The Metrica tracking is
+   cleaner than the competition ATD, so we degraded it to resemble automatic tracking, using only
+   documented properties and generic noise:
+   - extra ball dropouts during play until the ball is missing on 41% of frames (the figure
+     CHALLENGE.md gives for the graded frames), with random gap lengths, some over 5 s;
+   - position noise of 0.3 m on players and 0.5 m on the ball;
+   - 10% of each player track removed in chunks.
 
-The search ran in two stages, both leave-one-game-out on the same three games:
+   Two noise seeds per game. A random search over 400 parameter sets (9 parameters, wider ranges
+   than before) was scored on the degraded games and compared with the stage-2 parameters on
+   exactly the same data:
 
-1. **Core rules** (288 parameter sets: control radius 1.0–3.0 m, dwell 3–20 frames, stoppage-speed
-   rule off / 0.8 / 1.2 m/s, missing-ball hold 5–20 s, minimum possession 1–2 s). Held-out mean
-   spellF1 0.605.
-2. **Ball-gap handling** (288 parameter sets: radius 1.0–2.0 m, dwell 3–10 frames, stoppage-speed
-   rule off / 1.2 m/s, missing-ball hold 5–10 s, ball interpolation off / 1 / 2 / 5 s, long gaps
-   dead from their start yes / no). This stage includes the stage-1 model unchanged, so the
-   comparison is like for like. We decided in advance to keep the new rules only if the held-out
-   mean improved and at least two of the three held-out games improved. All three improved, and
-   the held-out mean rose from 0.605 to 0.654 (table above).
+| held-out game (degraded) | selected spellF1 | stage-2 parameters | baseline algorithm |
+|---|---|---|---|
+| Game 1 | 0.587 | 0.519 | 0.320 |
+| Game 2 | 0.606 | 0.567 | 0.314 |
+| Game 3 | 0.552 | 0.466 | 0.261 |
+| **mean** | **0.582** | 0.517 | 0.298 |
 
-Final parameters, the best mean over all three games: radius 1.0 m, dwell 5 frames, missing-ball
-hold 125 frames (5 s) with long gaps dead from their start, ball interpolation over gaps of up to
-50 frames (2 s), minimum possession 25 frames, stoppage-speed rule off. Most of the stage-2 gain
-comes from treating long gaps as dead from their start (about +0.04 mean spellF1). Interpolation
-adds about +0.01, within the noise band. Once long gaps are handled, the stoppage-speed rule no
-longer helps and the search switched it off.
+All three held-out games improved, so the stage-3 parameters were adopted. On the clean games they
+score 0.689 / 0.646 / 0.631 (mean 0.655, against 0.665 for the stage-2 parameters). The robustness
+gain on noisy tracking (+0.065) costs about 0.01 on clean tracking, which is within the noise band.
+
+**Final parameters** (best mean over the three degraded games): control radius 1.0 m, dwell
+3 frames, switch margin 0.25 m, ball interpolation over gaps of up to 100 frames (4 s), gaps
+longer than 175 frames (7 s) dead from their start, restart radius 2.5 m, D gaps of up to 50 frames
+(2 s) between the same team bridged, minimum possession 40 frames (1.6 s), stoppage-speed rule off.
+The core choices (radius, dwell, margin, long-gap rule, bridging, minimum possession) were the same
+in all three folds. The gap hold (4–7 s), the interpolation length and the restart radius varied
+between folds, so they are only weakly determined.
 
 **These numbers are not comparable to the leaderboard.** The Metrica tracking is cleaner than the
 competition's uncorrected ATD, and our reference labels come from events, whereas the competition
@@ -114,12 +131,13 @@ algorithm on independent matches. They do not predict our leaderboard score.
 - **Loose balls, passes in flight and contested balls** keep the last team in possession
   (CHALLENGE.md). They never produce D.
 - **Ball not tracked** (41% of graded frames):
-  - **Short gaps (up to 2 s)** with the ball seen on both sides: the ball's path is interpolated, so
+  - **Short gaps (up to 4 s)** with the ball seen on both sides: the ball's path is interpolated, so
     possession follows the ball through the gap and changes, or the ball goes out, at the right
     moment.
   - **Longer gaps:** the last team keeps possession.
-  - **Gaps longer than 5 s:** the whole gap is D, on the assumption that a long disappearance
-    usually means the ball left the playing area. The external games support this.
+  - **Gaps longer than 7 s:** the whole gap is D, on the assumption that a long disappearance
+    usually means the ball left the playing area. The external games, both clean and degraded,
+    support this.
 - **Change of possession (challenges):** the opponent must be the nearest team to the ball, within
   `distance_threshold` metres, and closer than the current team by `switch_margin_m`, for
   `dwell_frames` consecutive tracked frames. A single touch, a deflection or a lost aerial duel
@@ -127,23 +145,23 @@ algorithm on independent matches. They do not predict our leaderboard score.
   merged into their neighbours.
 - **Dead ball (D):**
   - the tracked or interpolated ball is beyond a touchline or goal line by more than 1 m;
-  - the ball has been missing for more than 5 s (above);
+  - the ball has been missing for more than 7 s (above);
   - the tracked ball is far from every player for 5 s.
   - A stoppage detector based on player motion (players near-static while the ball does not move)
     is implemented, but the external search switched it off in the final configuration (Section 3).
-- **Restarts:** after a stoppage, the first player within 3.5 m of the ball once play resumes gives
+- **Restarts:** after a stoppage, the first player within 2.5 m of the ball once play resumes gives
   that team possession.
 
-Final parameters are in `params_tuned.json`, and every configuration's per-game scores are in
-`docs/external_cv_results.json`.
+Final parameters are in `params_tuned.json`. Every configuration's per-game scores are in
+`docs/external_cv_results.json` (stages 1–2) and `docs/robust_cv_results.json` (stage 3).
 
 ## 5. Limitations and what we would do next
 
-- **Domain shift.** The parameters were selected on cleaner Metrica tracking. The competition ATD
-  has fragmented tracks and identity switches, so the best dwell time and control radius may
-  differ there. We did not adjust them, because there is no permitted way to measure them on the
-  provided game.
-- **Long ball gaps are a strong assumption.** Treating every gap over 5 s as dead ball works on the
+- **Domain shift.** Stage 3 simulates automatic-tracking noise, but the noise model (dropout
+  lengths, jitter size, track fragmentation) is our assumption, not a measurement of the
+  competition ATD. Identity switches between teams are not simulated. The competition ATD may
+  differ, and there is no permitted way to measure that on the provided game.
+- **Long ball gaps are a strong assumption.** Treating every gap over 7 s as dead ball works on the
   external games. The competition tracking is uncorrected and may lose the ball for long stretches
   during live play, where this rule would wrongly insert stoppages. Interpolation is linear, so it
   does not model lofted balls or bounces. A physical flight model and a detector for "ball lost
@@ -166,7 +184,9 @@ python evaluation/validate_submission.py Soleva.csv
 
 # optional: reproduce the parameter selection on external data
 python scripts/download_external_data.py
-python scripts/external_cv.py
+python scripts/external_cv.py --stage 1 --no-write   # stage 1
+python scripts/external_cv.py --no-write             # stage 2
+python scripts/robust_cv.py --write-params           # stage 3 (writes params_tuned.json)
 ```
 
 The pipeline is deterministic: the same inputs always produce the same file.

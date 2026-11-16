@@ -25,9 +25,11 @@ It stops with an error if the data is missing; there is no synthetic or fallback
 ## Reproduce the parameter selection (external data only)
 
 ```bash
-python scripts/download_external_data.py   # Metrica public sample games 1-3 -> ext_data/
-python scripts/external_cv.py              # leave-one-game-out grid, writes params_tuned.json
-                                           # and docs/external_cv_results.json (~7 min)
+python scripts/download_external_data.py      # Metrica public sample games 1-3 -> ext_data/
+python scripts/external_cv.py --stage 1 --no-write   # stage 1: core rules, clean games
+python scripts/external_cv.py --no-write              # stage 2: + ball-gap rules, clean games
+python scripts/robust_cv.py --write-params            # stage 3: degraded games -> params_tuned.json
+                                                      # and docs/robust_cv_results.json (~17 min)
 ```
 
 ## Tests
@@ -44,7 +46,8 @@ python -m pytest tests          # no competition data needed; uses a fake ATD fi
 | `src/atd_loader.py` | FIFA/EPTS reader (competition ATD and Metrica Game 3) |
 | `src/possession_model.py` | the possession rules |
 | `src/event_labels.py` | reference labels for the external Metrica games, built from their events |
-| `scripts/external_cv.py` | external evaluation and parameter selection |
+| `scripts/external_cv.py` | external evaluation, stages 1-2 (clean Metrica games) |
+| `scripts/robust_cv.py` | stage 3: selection on degraded Metrica games (final parameters) |
 | `games.py`, `evaluation/` | copied unchanged from the official challenge repository (MIT) |
 
 Data handling: `data/`, `ext_data/`, videos and generated submissions are gitignored. No match

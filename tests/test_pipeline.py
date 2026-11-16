@@ -291,3 +291,24 @@ def test_long_gap_dead_from_start():
     params = dict(NO_STOPPAGE, max_missing_hold_frames=100, dead_long_gaps_from_start=True)
     labels = predict_possession(make_tracking(300, home, away, ball), params)
     assert labels[45] == "H" and set(labels[50:250]) == {"D"}
+
+
+# --------------------------------------------------------------------------- robustness search
+
+def test_degradation_is_deterministic_and_hits_ball_target():
+    sys.path.insert(0, os.path.join(ROOT, "scripts"))
+    from robust_cv import TARGET_BALL_VISIBLE, degrade
+
+    n = 5000
+    rng = np.random.default_rng(0)
+    td = UnifiedTrackingData(
+        frame_indices=np.arange(n),
+        periods=np.ones(n, dtype=np.int32),
+        home_positions=rng.uniform(-30, 30, (n, 11, 2)).astype(np.float32),
+        away_positions=rng.uniform(-30, 30, (n, 11, 2)).astype(np.float32),
+        ball_position=rng.uniform(-30, 30, (n, 2)).astype(np.float32),
+    )
+    a, b = degrade(td, 7), degrade(td, 7)
+    np.testing.assert_array_equal(a.ball_position, b.ball_position)
+    visible = (~np.isnan(a.ball_position).any(axis=1)).mean()
+    assert abs(visible - TARGET_BALL_VISIBLE) < 0.02
