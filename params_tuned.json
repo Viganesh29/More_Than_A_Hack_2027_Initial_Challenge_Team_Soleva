@@ -4,8 +4,8 @@
   "notes": "Parameters selected by scripts/external_cv.py on the public Metrica sample games only (best mean spellF1 over games 1-3 against event-derived labels). Nothing was fitted to the competition match, its video or its ground truth.",
   "external_cv": {
     "baseline_mean_spellF1": 0.4167,
-    "logo_mean_held_out_spellF1": 0.6045,
-    "logo_mean_held_out_macroF1": 0.901
+    "logo_mean_held_out_spellF1": 0.654,
+    "logo_mean_held_out_macroF1": 0.9344
   },
   "parameters": {
     "distance_threshold": 1.0,
@@ -17,9 +17,11 @@
     "hold_on_loose_ball": true,
     "max_missing_hold_frames": 125,
     "prolonged_loose_dead_frames": 125,
+    "ball_interp_max_gap": 50,
+    "dead_long_gaps_from_start": true,
     "enable_dead_ball": true,
-    "enable_stoppage_speed": true,
-    "stoppage_speed_mps": 1.2,
+    "enable_stoppage_speed": false,
+    "stoppage_speed_mps": 1.0,
     "stoppage_ball_speed_mps": 2.0,
     "stoppage_min_frames": 50,
     "speed_smoothing_frames": 25,

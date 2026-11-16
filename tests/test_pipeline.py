@@ -261,3 +261,33 @@ def test_pipeline_end_to_end_on_fake_atd(tmp_path):
     graded = np.r_[labels[11185:90652], labels[110808:190198]]
     assert set(graded) <= {"H", "A", "D"}
     assert {"H", "A", "D"} <= set(graded)
+
+
+# --------------------------------------------------------------------------- ball flight
+
+def test_ball_interpolation_times_turnover_inside_gap():
+    home, away, ball = scenario()
+    ball[100:140] = np.nan  # ball lost by the tracker, reappears with the opponent
+    ball[140:] = away[140:] - [0.5, 0.0]
+    base = dict(NO_STOPPAGE, dwell_frames=1)
+    plain = predict_possession(make_tracking(300, home, away, ball), base)
+    flown = predict_possession(make_tracking(300, home, away, ball), dict(base, ball_interp_max_gap=50))
+    assert np.flatnonzero(plain == "A")[0] >= 140
+    assert np.flatnonzero(flown == "A")[0] < 140
+
+
+def test_ball_interpolation_detects_line_crossing_inside_gap():
+    home, away, ball = scenario()
+    ball[100:120] = np.nan
+    ball[120:150] = [-10.0, 40.0]  # reappears beyond the touchline
+    params = dict(NO_STOPPAGE, ball_interp_max_gap=50)
+    labels = predict_possession(make_tracking(300, home, away, ball), params)
+    assert np.flatnonzero(labels == "D")[0] < 120
+
+
+def test_long_gap_dead_from_start():
+    home, away, ball = scenario()
+    ball[50:250] = np.nan
+    params = dict(NO_STOPPAGE, max_missing_hold_frames=100, dead_long_gaps_from_start=True)
+    labels = predict_possession(make_tracking(300, home, away, ball), params)
+    assert labels[45] == "H" and set(labels[50:250]) == {"D"}

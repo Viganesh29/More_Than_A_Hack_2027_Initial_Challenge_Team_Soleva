@@ -25,7 +25,7 @@ Processing is deterministic and isolated per match period. Frames with period 0 
 graded halves) are labelled X by the pipeline, not by this engine.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 import re
 from typing import Any, Dict, List, Optional, Tuple, Union
 import warnings
@@ -54,6 +54,11 @@ class PossessionConfig:
     hold_on_loose_ball: bool = True  # keep last possessor while nobody is near the ball
     max_missing_hold_frames: int = 250  # 10 s without a ball -> treat as dead
     prolonged_loose_dead_frames: int = 125  # 5 s with the ball far from everyone -> dead
+    # Ball flight: interpolate the ball linearly across tracking gaps up to this many frames
+    # (0 = off). A turnover or a line crossing during the gap is then timed inside the gap.
+    ball_interp_max_gap: int = 0
+    # When a gap exceeds max_missing_hold_frames, label the whole gap D (not only its tail).
+    dead_long_gaps_from_start: bool = False
 
     # Stoppage detection from player motion
     enable_dead_ball: bool = True  # master switch for all D rules
@@ -219,6 +224,35 @@ class ModularPossessionEngine:
                 out[idx] = d.min(axis=1)
         return dist_h, dist_a, ball_valid, oob
 
+    def _interpolate_ball(
+        self, td: UnifiedTrackingData, periods: np.ndarray
+    ) -> UnifiedTrackingData:
+        """Ball flight model: linear interpolation across short tracking gaps.
+
+        Only gaps of at most `ball_interp_max_gap` frames that have an observed ball on both
+        sides inside the same period are filled. Longer gaps stay missing and are handled by the
+        hold / dead-ball rules. The pitch is convex, so a path between two in-play positions never
+        leaves it; a path towards an out-of-play position crosses the line at the interpolated
+        crossing frame.
+        """
+        max_gap = self.config.ball_interp_max_gap
+        if max_gap <= 0:
+            return td
+        ball = td.ball_position.copy()
+        missing = np.isnan(ball).any(axis=1)
+        if not missing.any():
+            return td
+        padded = np.concatenate(([False], missing, [False]))
+        edges = np.flatnonzero(padded[1:] != padded[:-1])
+        for start, end in zip(edges[::2], edges[1::2]):  # gap = [start, end)
+            if start == 0 or end >= len(ball) or end - start > max_gap:
+                continue
+            if periods[start - 1] != periods[end] or periods[end] == 0:
+                continue
+            w = (np.arange(1, end - start + 1) / (end - start + 1))[:, None]
+            ball[start:end] = (1 - w) * ball[start - 1] + w * ball[end]
+        return replace(td, ball_position=ball)
+
     def _stoppage_mask(self, td: UnifiedTrackingData) -> np.ndarray:
         """Frames inside a sustained near-static phase (players slow and the ball not moving)."""
         cfg = self.config
@@ -269,6 +303,7 @@ class ModularPossessionEngine:
         state = "D"  # every period starts from a stoppage (kickoff)
         dwell = 0
         missing_run = 0
+        gap_start = 0
         loose_run = 0
 
         for t in range(n):
@@ -276,6 +311,8 @@ class ModularPossessionEngine:
             if valid[t]:
                 missing_run = 0
             else:
+                if missing_run == 0:
+                    gap_start = t
                 missing_run += 1
 
             if dead_rules and (oob[t] or stopped[t]):
@@ -285,6 +322,8 @@ class ModularPossessionEngine:
 
             if not valid[t]:
                 if dead_rules and missing_run > cfg.max_missing_hold_frames:
+                    if cfg.dead_long_gaps_from_start and state != "D":
+                        labels[gap_start:t] = "D"
                     state, dwell = "D", 0
                 elif not cfg.hold_on_missing_ball:
                     state, dwell = "D", 0
@@ -422,9 +461,10 @@ class ModularPossessionEngine:
         if n == 0:
             return labels
 
-        dist_h, dist_a, valid, oob = self._distances(tracking_data)
-        stopped = self._stoppage_mask(tracking_data)
         periods = self._resolve_periods(n, tracking_data.periods, half_bounds)
+        stopped = self._stoppage_mask(tracking_data)  # from the observed ball only
+        flown = self._interpolate_ball(tracking_data, periods)
+        dist_h, dist_a, valid, oob = self._distances(flown)
 
         for p in np.unique(periods):
             if p == 0:

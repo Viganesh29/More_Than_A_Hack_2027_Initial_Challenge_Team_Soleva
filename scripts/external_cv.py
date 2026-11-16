@@ -16,7 +16,8 @@ What it does:
      with every score, to params_tuned.json and docs/external_cv_results.json.
 
     python scripts/download_external_data.py
-    python scripts/external_cv.py            # full grid, a few minutes
+    python scripts/external_cv.py            # final (stage 2) grid, ~8 min
+    python scripts/external_cv.py --stage 1  # stage 1 grid (core rules only)
     python scripts/external_cv.py --quick    # defaults + baseline only
 """
 
@@ -44,12 +45,23 @@ from src.tracking import UnifiedTrackingData  # noqa: E402
 EXT = os.path.join(ROOT, "ext_data")
 
 # Grid of physically meaningful values. Not fitted to the competition match in any way.
-GRID = {
+GRID_STAGE1 = {
     "distance_threshold": [1.0, 1.5, 2.0, 3.0],
     "dwell_frames": [3, 5, 10, 20],
     "stoppage_speed_mps": [0.0, 0.8, 1.2],  # 0.0 = stoppage-speed rule off
     "max_missing_hold_frames": [125, 250, 500],
     "min_spell_frames": [25, 50],
+}
+
+# Stage 2 adds the ball-gap rules; it contains the stage-1 winner unchanged for a fair comparison.
+GRID_STAGE2 = {
+    "distance_threshold": [1.0, 1.5, 2.0],
+    "dwell_frames": [3, 5, 10],
+    "stoppage_speed_mps": [0.0, 1.2],  # 0.0 = stoppage-speed rule off
+    "max_missing_hold_frames": [125, 250],
+    "min_spell_frames": [25],
+    "ball_interp_max_gap": [0, 25, 50, 125],  # 0 = ball-flight interpolation off
+    "dead_long_gaps_from_start": [False, True],
 }
 
 
@@ -138,12 +150,12 @@ def score(gt: np.ndarray, pred: np.ndarray) -> Dict[str, float]:
     }
 
 
-def grid_configs(quick: bool) -> List[Dict]:
+def grid_configs(quick: bool, grid: Dict) -> List[Dict]:
     if quick:
         return [{}]
-    keys = list(GRID)
+    keys = list(grid)
     configs = []
-    for values in itertools.product(*(GRID[k] for k in keys)):
+    for values in itertools.product(*(grid[k] for k in keys)):
         cfg = dict(zip(keys, values))
         if cfg["stoppage_speed_mps"] == 0.0:
             cfg["enable_stoppage_speed"] = False
@@ -159,6 +171,8 @@ def main() -> None:
     parser.add_argument("--quick", action="store_true", help="defaults and baseline only")
     parser.add_argument("--games", type=int, nargs="+", default=[1, 2, 3])
     parser.add_argument("--no-write", action="store_true", help="do not update params_tuned.json")
+    parser.add_argument("--stage", type=int, choices=[1, 2], default=2,
+                        help="1 = core rules grid, 2 = core + ball-gap rules (final, default)")
     args = parser.parse_args()
 
     t0 = time.time()
@@ -170,7 +184,8 @@ def main() -> None:
     baseline = {g: score(gt, baseline_labels(td)) for g, (td, gt) in data.items()}
     print("baseline (official algorithm, window 50):", baseline)
 
-    configs = grid_configs(args.quick)
+    grid = GRID_STAGE1 if args.stage == 1 else GRID_STAGE2
+    configs = grid_configs(args.quick, grid)
     print(f"evaluating {len(configs)} parameter sets x {len(data)} games")
     table = []
     for i, cfg in enumerate(configs):
@@ -210,7 +225,7 @@ def main() -> None:
         "final_params": final["params"],
         "final_per_game": final["per_game"],
         "n_configs": len(configs),
-        "grid": GRID if not args.quick else None,
+        "grid": grid if not args.quick else None,
         "defaults_per_game": defaults["per_game"] if defaults else None,
     }
     print(json.dumps({k: summary[k] for k in ("baseline_mean_spellF1", "logo_mean_held_out_spellF1",

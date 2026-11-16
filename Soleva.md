@@ -23,10 +23,11 @@ The pipeline (`run_pipeline.py`) works as follows:
    numpy and maps track slots to teams from the XML (the first `<Team>` is home). It aligns frames
    by `video_frame = frame_id - 1`. The graded halves are taken from the official `games.py`
    (video frames 11185–90651 and 110808–190197).
-2. **Per-frame features.** We compute the distance from the ball to the nearest home player and to
-   the nearest away player, whether the ball is tracked, and whether it is outside the pitch. We
-   also compute a *stoppage* signal: the median player speed, smoothed over 1 s, below a threshold
-   while the ball is not moving, sustained for at least 2 s.
+2. **Ball flight and per-frame features.** Tracking gaps of up to 2 s with the ball observed on
+   both sides are filled by linear interpolation, so a turnover or a line crossing that happens
+   while the tracker has lost the ball is timed inside the gap. We then compute the distance from
+   the ball to the nearest home player and to the nearest away player, whether the ball is
+   tracked, and whether it is outside the pitch.
 3. **State machine per half** (H / A / D). The rules are listed in Section 4.
 4. **Post-processing.** Short D gaps between two runs of the same team are bridged, unless the
    ball was clearly out. Possessions shorter than 1 s are merged into the neighbouring possession.
@@ -76,12 +77,29 @@ algorithm (nearest player, ±50-frame majority vote) run on the same games.
 
 | held-out game | engine spellF1 | engine macroF1 | baseline spellF1 | baseline macroF1 | possessions: engine / reference |
 |---|---|---|---|---|---|
-| Game 1 | 0.652 | 0.908 | 0.441 | 0.828 | 296 / 383 |
-| Game 2 | 0.591 | 0.907 | 0.415 | 0.858 | 261 / 359 |
-| Game 3 | 0.570 | 0.888 | 0.395 | 0.841 | 421 / 408 |
-| **mean** | **0.605** | **0.901** | **0.417** | **0.842** | |
+| Game 1 | 0.689 | 0.929 | 0.441 | 0.828 | 293 / 383 |
+| Game 2 | 0.646 | 0.939 | 0.415 | 0.858 | 253 / 359 |
+| Game 3 | 0.627 | 0.935 | 0.395 | 0.841 | 407 / 408 |
+| **mean** | **0.654** | **0.934** | **0.417** | **0.842** | |
 
-Grid: 288 parameter sets (control radius 1.0–3.0 m, dwell 3–20 frames, stoppage speed off / 0.8 / 1.2 m/s, missing-ball hold 5–20 s, minimum possession 1–2 s). The selected set was the same in two of the three folds. The final parameters are the best mean over all three games: radius 1.0 m, dwell 5 frames, stoppage speed 1.2 m/s, missing-ball hold 125 frames, minimum possession 25 frames. With the other values fixed, switching the stoppage-speed rule off lowers the mean from 0.614 to 0.600 (+0.014 for the rule), which is within the noise band.
+The search ran in two stages, both leave-one-game-out on the same three games:
+
+1. **Core rules** (288 parameter sets: control radius 1.0–3.0 m, dwell 3–20 frames, stoppage-speed
+   rule off / 0.8 / 1.2 m/s, missing-ball hold 5–20 s, minimum possession 1–2 s). Held-out mean
+   spellF1 0.605.
+2. **Ball-gap handling** (288 parameter sets: radius 1.0–2.0 m, dwell 3–10 frames, stoppage-speed
+   rule off / 1.2 m/s, missing-ball hold 5–10 s, ball interpolation off / 1 / 2 / 5 s, long gaps
+   dead from their start yes / no). This stage includes the stage-1 model unchanged, so the
+   comparison is like for like. We decided in advance to keep the new rules only if the held-out
+   mean improved and at least two of the three held-out games improved. All three improved, and
+   the held-out mean rose from 0.605 to 0.654 (table above).
+
+Final parameters, the best mean over all three games: radius 1.0 m, dwell 5 frames, missing-ball
+hold 125 frames (5 s) with long gaps dead from their start, ball interpolation over gaps of up to
+50 frames (2 s), minimum possession 25 frames, stoppage-speed rule off. Most of the stage-2 gain
+comes from treating long gaps as dead from their start (about +0.04 mean spellF1). Interpolation
+adds about +0.01, within the noise band. Once long gaps are handled, the stoppage-speed rule no
+longer helps and the search switched it off.
 
 **These numbers are not comparable to the leaderboard.** The Metrica tracking is cleaner than the
 competition's uncorrected ATD, and our reference labels come from events, whereas the competition
@@ -95,20 +113,24 @@ algorithm on independent matches. They do not predict our leaderboard score.
   goal kick or corner.
 - **Loose balls, passes in flight and contested balls** keep the last team in possession
   (CHALLENGE.md). They never produce D.
-- **Ball not tracked** (41% of graded frames): the last team keeps possession. If the ball has been
-  missing for more than `max_missing_hold_frames`, the frame becomes D, on the assumption that a
-  long disappearance usually means the ball left the playing area.
+- **Ball not tracked** (41% of graded frames):
+  - **Short gaps (up to 2 s)** with the ball seen on both sides: the ball's path is interpolated, so
+    possession follows the ball through the gap and changes, or the ball goes out, at the right
+    moment.
+  - **Longer gaps:** the last team keeps possession.
+  - **Gaps longer than 5 s:** the whole gap is D, on the assumption that a long disappearance
+    usually means the ball left the playing area. The external games support this.
 - **Change of possession (challenges):** the opponent must be the nearest team to the ball, within
   `distance_threshold` metres, and closer than the current team by `switch_margin_m`, for
   `dwell_frames` consecutive tracked frames. A single touch, a deflection or a lost aerial duel
   does not last long enough to flip possession. Possessions shorter than `min_spell_frames` are
   merged into their neighbours.
 - **Dead ball (D):**
-  - the tracked ball is beyond a touchline or goal line by more than 1 m;
-  - a stoppage: players are near-static and the ball is not moving for at least 2 s (free kicks,
-    injuries, goal celebrations);
-  - the ball has been missing for too long (above);
+  - the tracked or interpolated ball is beyond a touchline or goal line by more than 1 m;
+  - the ball has been missing for more than 5 s (above);
   - the tracked ball is far from every player for 5 s.
+  - A stoppage detector based on player motion (players near-static while the ball does not move)
+    is implemented, but the external search switched it off in the final configuration (Section 3).
 - **Restarts:** after a stoppage, the first player within 3.5 m of the ball once play resumes gives
   that team possession.
 
@@ -121,12 +143,14 @@ Final parameters are in `params_tuned.json`, and every configuration's per-game 
   has fragmented tracks and identity switches, so the best dwell time and control radius may
   differ there. We did not adjust them, because there is no permitted way to measure them on the
   provided game.
-- **Long ball gaps are ambiguous.** Holding possession through a 4-second gap is right inside a
-  possession, but wrong across an unseen turnover or an unseen ball-out. A ball-trajectory model
-  (extrapolating flight and detecting crossings of the lines) would separate these cases.
-- **The stoppage detector is coarse.** On the external games it adds only about 0.014 spellF1,
-  within the noise band. Smart Tagging set-piece intervals could confirm restarts, but we did not
-  evaluate this.
+- **Long ball gaps are a strong assumption.** Treating every gap over 5 s as dead ball works on the
+  external games. The competition tracking is uncorrected and may lose the ball for long stretches
+  during live play, where this rule would wrongly insert stoppages. Interpolation is linear, so it
+  does not model lofted balls or bounces. A physical flight model and a detector for "ball lost
+  during play" versus "ball out of play" would be the next step.
+- **Dead-ball detection without a tracked ball** relies on gap length alone. Smart Tagging
+  set-piece intervals could confirm stoppages and restarts, but we could not evaluate them: the
+  external games have no Smart Tagging, and the provided game cannot be used for selection.
 - **Team assignment of the nearest player** relies on the slot-to-team mapping in the ATD metadata.
   A slot that is wrong for part of the match would flip possession labels during that stretch.
 - **Small external sample.** Three matches, about 1,150 possessions in total. With a noise band of

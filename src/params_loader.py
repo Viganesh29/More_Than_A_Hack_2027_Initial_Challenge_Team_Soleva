@@ -30,6 +30,7 @@ BOUNDS = {
     "bridging_max_gap": (0, 1000),
     "min_spell_frames": (0, 1000),
     "smoothing_window": (0, 1001),
+    "ball_interp_max_gap": (0, 10000),
 }
 
 
