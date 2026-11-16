@@ -3,7 +3,7 @@
 ## 1. Overview and Purpose
 This document provides legal attribution, licensing terms, source repository references, and verification instructions for the external datasets utilized in the **More Than A Hack 2027 Phase 1 (Ball Possession)** challenge.
 
-In accordance with the competition rules (`RULES.md`), parameter selection and benchmarking (`scripts/external_cv.py`) use only these external games. No data from the competition match is used for either.
+In accordance with the competition rules (`RULES.md`), parameter selection and benchmarking (`scripts/external_cv.py`, `scripts/robust_cv.py`) use only these external games. No data from the competition match is used for either.
 
 ---
 
@@ -56,7 +56,7 @@ External datasets are downloaded directly into the gitignored `ext_data/` direct
 ### Terms
 The `metrica-sports/sample-data` repository does not ship a formal licence file. Its README ("Legal stuff") asks users to be responsible with the data and to acknowledge Metrica Sports as the source when it is used publicly, which this project does here and in the technical document.
 - **Anonymisation**: player, team and competition names are anonymised by Metrica Sports.
-- **Use in this project**: evaluation and parameter selection only (`scripts/external_cv.py`, leave-one-game-out over games 1–3).
+- **Use in this project**: evaluation and parameter selection only, leave-one-game-out over games 1–3: on the original tracking (`scripts/external_cv.py`) and on copies degraded to resemble automatic tracking (`scripts/robust_cv.py`).
 - **Redistribution**: the files are downloaded into the gitignored `ext_data/` folder and are not committed.
 
 ### Relation to the competition rules

@@ -12,12 +12,16 @@ What it does:
      (evaluation/possession_metrics.py).
   3. Leave-one-game-out: for each held-out game, picks the parameter set with the best mean
      spellF1 on the other two games and reports its score on the held-out game.
-  4. Picks the final parameters as the best mean spellF1 over all three games and writes them,
-     with every score, to params_tuned.json and docs/external_cv_results.json.
+  4. Picks the best parameters over all three games and, unless --no-write is given, writes them
+     with every score to params_tuned.json and docs/external_cv_results.json.
+
+These are stages 1-2 of the parameter selection, on the clean games. The submitted parameters come
+from stages 3-4 (scripts/robust_cv.py, degraded games), so use --no-write to reproduce stages 1-2
+without replacing params_tuned.json.
 
     python scripts/download_external_data.py
-    python scripts/external_cv.py            # final (stage 2) grid, ~8 min
-    python scripts/external_cv.py --stage 1  # stage 1 grid (core rules only)
+    python scripts/external_cv.py --stage 1 --no-write  # stage 1 grid (core rules only)
+    python scripts/external_cv.py --no-write             # stage 2 grid (+ ball-gap rules), ~8 min
     python scripts/external_cv.py --quick    # defaults + baseline only
 """
 
